@@ -1,0 +1,16 @@
+current directory: /Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/javon/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180629-34297-anicy0.rb extconf.rb
+creating Makefile
+
+current directory: /Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 fastfilereaderext.bundle ./.gem.20180629-34297-beyrte

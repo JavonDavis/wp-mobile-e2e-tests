@@ -1,0 +1,21 @@
+sudo: false
+cache: bundler
+language: ruby
+rvm:
+  - 2.2.5
+  - 2.3.3
+  - 2.4.3
+  - 2.5.0
+
+before_install:
+  - gem update --system
+  - gem update bundler
+
+script:
+  - bundle exec rake rubocop
+  - bundle exec parallel_test test/unit/ -n 4
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never

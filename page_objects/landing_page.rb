@@ -1,0 +1,2 @@
+class LandingPage
+end
