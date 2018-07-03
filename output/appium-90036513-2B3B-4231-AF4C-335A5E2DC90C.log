@@ -1,0 +1,5 @@
+2018-07-03 00:22:44:179 - info: [Appium] Welcome to Appium v1.7.2
+2018-07-03 00:22:44:181 - info: [Appium] Non-default server args:
+2018-07-03 00:22:44:181 - info: [Appium]   port: 4725
+2018-07-03 00:22:44:181 - info: [Appium]   log: /Users/javon/Projects/WordpressAutomation/output/appium-90036513-2B3B-4231-AF4C-335A5E2DC90C.log
+2018-07-03 00:22:44:198 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4725

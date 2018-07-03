@@ -102,3 +102,10 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 .idea/
+
+# location of apk and .app files
+/apps/
+
+# Appium text files
+/appium-android.txt
+/appium-ios.txt

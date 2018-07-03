@@ -3,7 +3,7 @@ require 'bundler/setup'
 require 'rake/testtask'
 require 'parallel_appium'
 
-namespace :hsd do
+namespace :wordpress do
   desc 'Run tests'
   task :test, :file_path do |_t, _args|
 
