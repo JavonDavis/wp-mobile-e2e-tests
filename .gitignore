@@ -109,3 +109,5 @@ fabric.properties
 # Appium text files
 /appium-android.txt
 /appium-ios.txt
+
+output/
