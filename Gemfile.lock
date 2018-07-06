@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/JavonDavis/parallel_appium.git
+  revision: 8b3d08f6246e5d9828cb88eb9c9a82d76f07cc88
+  branch: develop
+  specs:
+    parallel_appium (0.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -17,10 +24,9 @@ GEM
       websocket-driver (>= 0.5.1)
     ffi (1.9.25)
     mini_portile2 (2.3.0)
-    nokogiri (1.8.3)
+    nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
-    parallel_appium (0.2.0)
     parallel_tests (2.21.3)
       parallel
     rake (12.3.1)
@@ -51,7 +57,7 @@ PLATFORMS
 
 DEPENDENCIES
   appium_lib
-  parallel_appium
+  parallel_appium!
   parallel_tests
   rake
   rspec
