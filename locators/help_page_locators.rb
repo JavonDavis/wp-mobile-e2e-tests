@@ -1,11 +1,11 @@
 class HelpPageLocators
+
   android_locators = {
-      # Help label id is a duplicate
-      contact_us_button: {id: 'org.wordpress.android:id/contact_us_button'}
+    title_label: {id: 'org.wordpress.android:id/create_account_label'},
   }
 
   ios_locators = {
-
+    title_label: {accessibility_id: 'WordPress Help Center'}
   }
 
   locators = {

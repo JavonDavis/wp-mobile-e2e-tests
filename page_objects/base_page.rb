@@ -1,4 +1,4 @@
-module BasePage
+class BasePage
   DEFAULT_WAIT_TIME = 6
 
   WEBDRIVER_ERRORS = [

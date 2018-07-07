@@ -8,11 +8,9 @@ RSpec.configure do |config|
   config.before :all do
     puts "Initializing Appium for #{ENV['platform']}"
     @driver = ParallelAppium::ParallelAppium.new.initialize_appium platform: ENV['platform']
-    puts "Driver is nil #{@driver.nil?}"
   end
 
   config.after :all do
-    puts('Quitting')
     @driver.driver_quit
   end
 end

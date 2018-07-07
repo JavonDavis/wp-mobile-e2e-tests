@@ -1,17 +1,16 @@
-require 'rspec'
+require_relative '../../page_objects/landing_page'
 
 ParallelAppium::Server.new.set_udid_environment_variable
 
 describe "#{ENV['platform']}: Login Page" do
 
   before(:each) do
-    puts 'Before Each'
-    puts "Driver is nil #{@driver.nil?} and udid is #{ENV['UDID']}"
-    driver = @driver.start_driver
+    platform = caps[:platformName].to_sym
+    driver = start_driver
+    @landing_page = LandingPage.new driver, platform
   end
 
-  it 'should should login successfully with correct email and password', ios: true, android: true do
-    sleep 15
-    expect(true).to equal false
+  it 'should successfully load landing page', ios: true, android: true do
+    expect(@landing_page.is_on_landing_page).to equal true
   end
 end
