@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1531087230963" stop="1531087265492">
+  <name>ios: Landing Page</name>
+  <title>ios: Landing Page</title>
+  <test-cases>
+    <test-case start="1531087258632" stop="1531087258704" status="passed">
+      <name>ios: Landing Page should successfully load landing page</name>
+      <title>ios: Landing Page should successfully load landing page</title>
+      <steps>
+        <step start="1531087258632" stop="1531087258704" status="passed">
+          <name>Check that landing page loaded</name>
+          <title>Check that landing page loaded</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="thread" value="70141161502660"/>
+        <label name="host" value="Javons-MacBook-Pro-2.local"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1531087258704" stop="1531087265262" status="passed">
+      <name>ios: Landing Page should successfully load all promotion cards</name>
+      <title>ios: Landing Page should successfully load all promotion cards</title>
+      <steps>
+        <step start="1531087258704" stop="1531087258760" status="passed">
+          <name>Check that landing page loaded</name>
+          <title>Check that landing page loaded</title>
+          <attachments/>
+        </step>
+        <step start="1531087258760" stop="1531087258811" status="passed">
+          <name>Check card #0</name>
+          <title>Check card #0</title>
+          <attachments/>
+        </step>
+        <step start="1531087258811" stop="1531087260121" status="passed">
+          <name>Swipe card #0</name>
+          <title>Swipe card #0</title>
+          <attachments/>
+        </step>
+        <step start="1531087260121" stop="1531087260184" status="passed">
+          <name>Check card #1</name>
+          <title>Check card #1</title>
+          <attachments/>
+        </step>
+        <step start="1531087260184" stop="1531087261464" status="passed">
+          <name>Swipe card #1</name>
+          <title>Swipe card #1</title>
+          <attachments/>
+        </step>
+        <step start="1531087261464" stop="1531087261520" status="passed">
+          <name>Check card #2</name>
+          <title>Check card #2</title>
+          <attachments/>
+        </step>
+        <step start="1531087261520" stop="1531087262767" status="passed">
+          <name>Swipe card #2</name>
+          <title>Swipe card #2</title>
+          <attachments/>
+        </step>
+        <step start="1531087262767" stop="1531087262819" status="passed">
+          <name>Check card #3</name>
+          <title>Check card #3</title>
+          <attachments/>
+        </step>
+        <step start="1531087262819" stop="1531087264020" status="passed">
+          <name>Swipe card #3</name>
+          <title>Swipe card #3</title>
+          <attachments/>
+        </step>
+        <step start="1531087264020" stop="1531087264081" status="passed">
+          <name>Check card #4</name>
+          <title>Check card #4</title>
+          <attachments/>
+        </step>
+        <step start="1531087264081" stop="1531087265262" status="passed">
+          <name>Swipe card #4</name>
+          <title>Swipe card #4</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="thread" value="70141161502660"/>
+        <label name="host" value="Javons-MacBook-Pro-2.local"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="70141161502660"/>
+    <label name="host" value="Javons-MacBook-Pro-2.local"/>
+  </labels>
+</ns2:test-suite>

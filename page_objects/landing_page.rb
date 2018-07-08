@@ -19,19 +19,19 @@ class LandingPage < BasePage
     locator = target_data[by.to_sym]
 
     locator = locator % promo_text
-    [by, locator]
+    {by => locator}
   end
 
   def promo_label_exists(promo_text)
     explicitly_wait_for_presence(promo_label_locator promo_text)
   end
 
-  def swipe_promo_label(promo_text, left=true)
+  def swipe_promo_label(promo_text, direction = :left)
     unless promo_label_exists(promo_text)
       false
     end
 
     promo_label_element = @driver.find_element(promo_label_locator promo_text)
-
+    swipe promo_label_element, direction
   end
 end

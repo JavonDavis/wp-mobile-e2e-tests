@@ -1,5 +1,4 @@
-# Author::    Javon Davis  (mailto:javonldavis14@gmail.com)
-# License::   Distributes under the same terms as Ruby
+# @author   Javon Davis  (mailto:javonldavis14@gmail.com)
 
 # The class should be defined as the Parent class for all page
 # objects in the project. It provides useful methods for
@@ -15,12 +14,10 @@ class BasePage
   ].freeze
 
   # Waits for a specified number of seconds for the presence of an element
-  # Params:
   #
-  #
-  # * +remove_string+ - Document the first attribute
-  # * +append_string+ - Document the second attribute
-  # * +options+ - Document the third attribute
+  # @param [Map] locator A {<locator strategy>: <selector>} as a mapping
+  # @param [Integer] wait_time Time in seconds to wait, defaults to (see #DEFAULT_WAIT_TIME)
+  # @return [Boolean] true if the element was present, false otherwise
   def explicitly_wait_for_presence(locator = nil, wait_time = DEFAULT_WAIT_TIME)
     puts "Explicitly waiting for element: #{locator}"
     begin
@@ -36,6 +33,10 @@ class BasePage
     end
   end
 
+  # Waits for  specified number of seconds and then clicks the element if it's present
+  # @param [Map] locator A {<locator strategy>: <selector>} as a mapping
+  # @param [Integer] wait_time Time in seconds to wait, defaults to (see #DEFAULT_WAIT_TIME)
+  # @return [Boolean] true if the element was present and we were able to click it, false otherwise
   def wait_then_click(locator, wait_time = DEFAULT_WAIT_TIME)
     is_present = explicitly_wait_for_presence(locator, wait_time)
     unless is_present
@@ -53,25 +54,30 @@ class BasePage
     end
   end
 
-  def swipe(element, direction)
-    direction.downcase!
+  # Swipes across the center of the element in the given direction
+  # @param [WebDriverElement] element The element to be swiped across
+  # @param [Symbol] direction, `:left`, `:right`, `:up`, or `:down`
+  # @param [Integer] displacement How far off the edges to start and stop the swipe, defaults to 100px
+  def swipe(element, direction, displacement = 100)
+    puts "Swiping element #{direction}"
     case direction
-      when 'left'
-        start_x = element.location['x'].to_i + element.size['width'].to_i
-        start_y = 0
-        end_x = 0
-        end_y = 0
-      when 'right'
+      when :left
+        displacement = 0
+        start_x = element.location['x'].to_i + element.size['width'].to_i + displacement
+        start_y = element.location['y'].to_i + element.size['width'].to_i/2
+        end_x = element.location['x'].to_i - displacement
+        end_y = element.location['y'].to_i + element.size['width'].to_i/2
+      when :right
         start_x = 0
         start_y = 0
         end_x = 0
         end_y = 0
-      when 'up'
+      when :up
         start_x = 0
         start_y = 0
         end_x = 0
         end_y = 0
-      when 'down'
+      when :down
         start_x = 0
         start_y = 0
         end_x = 0
@@ -81,7 +87,11 @@ class BasePage
         return false
     end
 
-    Appium::TouchAction.new.swipe(start_x: start_x, start_y: start_y, end_x: end_x, end_y:end_y, duration: 300).perform
+    puts "Start x: #{start_x}\nStart y: #{start_y}\nEnd x: #{end_x}\nEnd y #{end_y}"
+
+    # Appium::TouchAction.new.swipe(start_x: start_x, start_y: start_y, end_x: end_x, end_y:end_y, duration: 1000).perform
+
+    driver.execute_script 'mobile: swipe', direction: 'left'
     true
   end
 end
