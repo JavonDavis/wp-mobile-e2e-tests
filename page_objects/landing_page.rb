@@ -3,15 +3,6 @@ require_relative '../locators/landing_page_locators'
 
 class LandingPage < BasePage
 
-  # Promotion texts for cards
-  promo_texts = [
-      'Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you go.',
-      'Watch readers from around the world read and interact with your site — in realtime.',
-      'Catch up with your favorite sites and join the conversation anywhere, any time.',
-      'Your notifications travel with you — see comments and likes as they happen.',
-      'Manage your Jetpack-powered site on the go — you\'ve got WordPress in your pocket.'
-  ]
-
   def initialize(driver, platform)
     @driver = driver
     @platform = platform
@@ -22,4 +13,25 @@ class LandingPage < BasePage
     explicitly_wait_for_presence @landing_locators[:login_button]
   end
 
+  def promo_label_locator(promo_text)
+    target_data = @landing_locators[:promo_label]
+    by = target_data.keys[0]
+    locator = target_data[by.to_sym]
+
+    locator = locator % promo_text
+    [by, locator]
+  end
+
+  def promo_label_exists(promo_text)
+    explicitly_wait_for_presence(promo_label_locator promo_text)
+  end
+
+  def swipe_promo_label(promo_text, left=true)
+    unless promo_label_exists(promo_text)
+      false
+    end
+
+    promo_label_element = @driver.find_element(promo_label_locator promo_text)
+
+  end
 end
