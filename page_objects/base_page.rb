@@ -90,7 +90,7 @@ class BasePage
 
     # Appium::TouchAction.new.swipe(start_x: start_x, start_y: start_y, end_x: end_x, end_y:end_y, duration: 1000).perform
 
-    driver.execute_script 'mobile: swipe', direction: 'left'
+    driver.execute_script 'mobile: swipe', direction: direction.to_s
     true
   end
 end

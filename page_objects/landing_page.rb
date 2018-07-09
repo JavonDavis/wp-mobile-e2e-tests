@@ -9,29 +9,41 @@ class LandingPage < BasePage
     @landing_locators = LandingPageLocators.new.locators platform
   end
 
+  # Checks if the screen is on the login page
+  # @return [Boolean] True if on the landing page, false otherwise
   def is_on_landing_page
     explicitly_wait_for_presence @landing_locators[:login_button]
   end
 
-  def promo_label_locator(promo_text)
-    target_data = @landing_locators[:promo_label]
-    by = target_data.keys[0]
-    locator = target_data[by.to_sym]
-
-    locator = locator % promo_text
-    {by => locator}
-  end
-
-  def promo_label_exists(promo_text)
-    explicitly_wait_for_presence(promo_label_locator promo_text)
-  end
-
-  def swipe_promo_label(promo_text, direction = :left)
-    unless promo_label_exists(promo_text)
-      false
+  # @return [String] the text contained in the promo label, nil otherwise
+  def promo_label_text
+    unless is_on_landing_page
+      nil
+    end
+    unless explicitly_wait_for_presence @landing_locators[:promo_label]
+      nil
     end
 
-    promo_label_element = @driver.find_element(promo_label_locator promo_text)
+    if @platform == :android
+      promo_label_element = @driver.find_element @landing_locators[:promo_label]
+    elsif @platform == :ios
+      promo_label_elements = @driver.find_elements @landing_locators[:promo_label]
+      promo_label_element = promo_label_elements[1] # First element is the time
+    else
+      puts 'Unknown platform when checking promo label text'
+      return nil
+    end
+    promo_label_element.text
+  end
+
+  # Swipes the promo label in the specified direction, this is used to switch the card
+  # @param [Symbol] direction, , `:left`, `:right`, `:up`, or `:down`
+  # @return [Boolean] true if it was able to swipe, false otherwise
+  def swipe_promo_label(direction = :left)
+    unless explicitly_wait_for_presence @landing_locators[:promo_label]
+      false
+    end
+    promo_label_element = @driver.find_element @landing_locators[:promo_label]
     swipe promo_label_element, direction
   end
 end
