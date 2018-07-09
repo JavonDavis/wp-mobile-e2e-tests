@@ -62,26 +62,25 @@ class BasePage
     puts "Swiping element #{direction}"
     case direction
       when :left
-        displacement = 0
         start_x = element.location['x'].to_i + element.size['width'].to_i + displacement
-        start_y = element.location['y'].to_i + element.size['width'].to_i/2
+        start_y = element.location['y'].to_i + element.size['height'].to_i/2
         end_x = element.location['x'].to_i - displacement
-        end_y = element.location['y'].to_i + element.size['width'].to_i/2
+        end_y = element.location['y'].to_i + element.size['height'].to_i/2
       when :right
-        start_x = 0
-        start_y = 0
-        end_x = 0
-        end_y = 0
+        start_x = element.location['x'].to_i - displacement
+        start_y = element.location['y'].to_i + element.size['height'].to_i/2
+        end_x = element.location['x'].to_i + element.size['width'].to_i + displacement
+        end_y = element.location['y'].to_i + element.size['height'].to_i/2
       when :up
-        start_x = 0
-        start_y = 0
-        end_x = 0
-        end_y = 0
+        start_x = element.location['x'].to_i + element.size['width'].to_i/2
+        start_y = element.location['y'].to_i + element.size['height'].to_i + displacement
+        end_x = element.location['x'].to_i + element.size['width'].to_i/2
+        end_y = element.location['y'].to_i - displacement
       when :down
-        start_x = 0
-        start_y = 0
-        end_x = 0
-        end_y = 0
+        start_x = element.location['x'].to_i + element.size['width'].to_i/2
+        start_y = element.location['y'].to_i - displacement
+        end_x = element.location['x'].to_i + element.size['width'].to_i/2
+        end_y = element.location['y'].to_i + element.size['height'].to_i + displacement
       else
         puts "Can not swipe in direction #{direction}"
         return false

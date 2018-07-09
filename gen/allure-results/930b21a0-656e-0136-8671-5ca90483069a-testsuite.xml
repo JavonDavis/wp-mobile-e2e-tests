@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1531087230963" stop="1531087265492">
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1531117409917" stop="1531117433007">
   <name>ios: Landing Page</name>
   <title>ios: Landing Page</title>
   <test-cases>
-    <test-case start="1531087258632" stop="1531087258704" status="passed">
+    <test-case start="1531117426702" stop="1531117426775" status="passed">
       <name>ios: Landing Page should successfully load landing page</name>
       <title>ios: Landing Page should successfully load landing page</title>
       <steps>
-        <step start="1531087258632" stop="1531087258704" status="passed">
+        <step start="1531117426703" stop="1531117426775" status="passed">
           <name>Check that landing page loaded</name>
           <title>Check that landing page loaded</title>
           <attachments/>
@@ -15,66 +15,66 @@
       </steps>
       <attachments/>
       <labels>
-        <label name="thread" value="70141161502660"/>
+        <label name="thread" value="70109393844180"/>
         <label name="host" value="Javons-MacBook-Pro-2.local"/>
       </labels>
       <parameters/>
     </test-case>
-    <test-case start="1531087258704" stop="1531087265262" status="passed">
+    <test-case start="1531117426776" stop="1531117432837" status="passed">
       <name>ios: Landing Page should successfully load all promotion cards</name>
       <title>ios: Landing Page should successfully load all promotion cards</title>
       <steps>
-        <step start="1531087258704" stop="1531087258760" status="passed">
+        <step start="1531117426776" stop="1531117426828" status="passed">
           <name>Check that landing page loaded</name>
           <title>Check that landing page loaded</title>
           <attachments/>
         </step>
-        <step start="1531087258760" stop="1531087258811" status="passed">
+        <step start="1531117426828" stop="1531117426879" status="passed">
           <name>Check card #0</name>
           <title>Check card #0</title>
           <attachments/>
         </step>
-        <step start="1531087258811" stop="1531087260121" status="passed">
+        <step start="1531117426879" stop="1531117428000" status="passed">
           <name>Swipe card #0</name>
           <title>Swipe card #0</title>
           <attachments/>
         </step>
-        <step start="1531087260121" stop="1531087260184" status="passed">
+        <step start="1531117428000" stop="1531117428057" status="passed">
           <name>Check card #1</name>
           <title>Check card #1</title>
           <attachments/>
         </step>
-        <step start="1531087260184" stop="1531087261464" status="passed">
+        <step start="1531117428057" stop="1531117429243" status="passed">
           <name>Swipe card #1</name>
           <title>Swipe card #1</title>
           <attachments/>
         </step>
-        <step start="1531087261464" stop="1531087261520" status="passed">
+        <step start="1531117429243" stop="1531117429293" status="passed">
           <name>Check card #2</name>
           <title>Check card #2</title>
           <attachments/>
         </step>
-        <step start="1531087261520" stop="1531087262767" status="passed">
+        <step start="1531117429293" stop="1531117430462" status="passed">
           <name>Swipe card #2</name>
           <title>Swipe card #2</title>
           <attachments/>
         </step>
-        <step start="1531087262767" stop="1531087262819" status="passed">
+        <step start="1531117430462" stop="1531117430516" status="passed">
           <name>Check card #3</name>
           <title>Check card #3</title>
           <attachments/>
         </step>
-        <step start="1531087262819" stop="1531087264020" status="passed">
+        <step start="1531117430516" stop="1531117431633" status="passed">
           <name>Swipe card #3</name>
           <title>Swipe card #3</title>
           <attachments/>
         </step>
-        <step start="1531087264020" stop="1531087264081" status="passed">
+        <step start="1531117431633" stop="1531117431689" status="passed">
           <name>Check card #4</name>
           <title>Check card #4</title>
           <attachments/>
         </step>
-        <step start="1531087264081" stop="1531087265262" status="passed">
+        <step start="1531117431689" stop="1531117432836" status="passed">
           <name>Swipe card #4</name>
           <title>Swipe card #4</title>
           <attachments/>
@@ -82,14 +82,14 @@
       </steps>
       <attachments/>
       <labels>
-        <label name="thread" value="70141161502660"/>
+        <label name="thread" value="70109393844180"/>
         <label name="host" value="Javons-MacBook-Pro-2.local"/>
       </labels>
       <parameters/>
     </test-case>
   </test-cases>
   <labels>
-    <label name="thread" value="70141161502660"/>
+    <label name="thread" value="70109393844180"/>
     <label name="host" value="Javons-MacBook-Pro-2.local"/>
   </labels>
 </ns2:test-suite>
