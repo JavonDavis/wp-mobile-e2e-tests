@@ -29,11 +29,11 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            bundle install --retry=3 --path vendor
 
       - save_cache:
           paths:
-            - ./vendor/bundle
+            - ./vendor
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
 
@@ -49,3 +49,12 @@ jobs:
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
+  app:
+    steps:
+      - run:
+          name: pull app
+          command: |
+            curl https://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing --output /tmp/app/WordPress.apk
+            curl https://drive.google.com/file/d/18ODObtGuG3UYhgst-6h6ucn79_kYTxwD/view?usp=sharing --output /tmp/app/WordPress.app
+
+
