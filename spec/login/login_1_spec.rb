@@ -51,7 +51,7 @@ describe "#{ENV['platform']}: Landing Page" do
       end
     end
 
-    i = promo_texts.length
+    i = promo_texts.length - 1
     promo_texts.reverse_each do |promo_text|
       t.step "Check card ##{i}" do
         expect(@landing_page.promo_label_text).to eq promo_text

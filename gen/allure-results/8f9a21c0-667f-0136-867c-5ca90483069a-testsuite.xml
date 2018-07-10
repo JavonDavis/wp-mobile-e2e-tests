@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1531234664175" stop="1531234679844">
+  <name>android: Landing Page</name>
+  <title>android: Landing Page</title>
+  <test-cases>
+    <test-case start="1531234676960" stop="1531234677340" status="passed">
+      <name>android: Landing Page should successfully load landing page</name>
+      <title>android: Landing Page should successfully load landing page</title>
+      <steps>
+        <step start="1531234676961" stop="1531234677340" status="passed">
+          <name>Check that landing page loaded</name>
+          <title>Check that landing page loaded</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="thread" value="70167199504340"/>
+        <label name="host" value="Javons-MacBook-Pro-2.local"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1531234677341" stop="1531234678155" status="failed">
+      <name>android: Landing Page should successfully load all promotion cards</name>
+      <title>android: Landing Page should successfully load all promotion cards</title>
+      <failure>
+        <message>
+expected: "Publish from the park. Blog from the bus. Comment from the caf&#xE9;. WordPress goes where you do."
+     got: "Publish from the park. Blog from the bus. Comment from the caf&#xE9;. WordPress goes where you go."
+
+(compared using ==)
+</message>
+        <stack-trace>/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-support-3.7.1/lib/rspec/support.rb:97:in `block in &lt;module:Support&gt;'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-support-3.7.1/lib/rspec/support.rb:106:in `notify_failure'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/fail_with.rb:35:in `fail_with'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/handler.rb:38:in `handle_failure'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/handler.rb:50:in `block in handle_matcher'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/expectation_target.rb:65:in `to'&#xD;
+/Users/javon/Projects/WordpressAutomation/spec/login/login_1_spec.rb:46:in `block (4 levels) in &lt;top (required)&gt;'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/allure-rspec-0.8.0/lib/allure-rspec/dsl.rb:51:in `block in __with_step'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/allure-rspec-0.8.0/lib/allure-rspec/dsl.rb:47:in `synchronize'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/allure-rspec-0.8.0/lib/allure-rspec/dsl.rb:47:in `__with_step'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/allure-rspec-0.8.0/lib/allure-rspec/dsl.rb:20:in `step'&#xD;
+/Users/javon/Projects/WordpressAutomation/spec/login/login_1_spec.rb:45:in `block (3 levels) in &lt;top (required)&gt;'&#xD;
+/Users/javon/Projects/WordpressAutomation/spec/login/login_1_spec.rb:44:in `each'&#xD;
+/Users/javon/Projects/WordpressAutomation/spec/login/login_1_spec.rb:44:in `each_with_index'&#xD;
+/Users/javon/Projects/WordpressAutomation/spec/login/login_1_spec.rb:44:in `block (2 levels) in &lt;top (required)&gt;'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:254:in `instance_exec'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:254:in `block in run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/hooks.rb:466:in `block in run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/hooks.rb:604:in `run_around_example_hooks_for'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/hooks.rb:466:in `run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/allure-rspec-0.8.0/lib/allure-rspec/hooks.rb:33:in `run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:457:in `with_around_example_hooks'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:251:in `run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:628:in `block in run_examples'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:624:in `map'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:624:in `run_examples'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:590:in `run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:118:in `map'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/configuration.rb:1926:in `with_suite_hooks'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:113:in `block in run_specs'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/reporter.rb:79:in `report'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:112:in `run_specs'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:87:in `run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:71:in `run'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:45:in `invoke'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/gems/rspec-core-3.7.1/exe/rspec:4:in `&lt;top (required)&gt;'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/bin/rspec:23:in `load'&#xD;
+/Users/javon/Projects/WordpressAutomation/vendor/ruby/2.4.0/bin/rspec:23:in `&lt;main&gt;'</stack-trace>
+      </failure>
+      <steps>
+        <step start="1531234677342" stop="1531234677463" status="passed">
+          <name>Check that landing page loaded</name>
+          <title>Check that landing page loaded</title>
+          <attachments/>
+        </step>
+        <step start="1531234677463" stop="1531234678154" status="failed">
+          <name>Check card #0</name>
+          <title>Check card #0</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="thread" value="70167199504340"/>
+        <label name="host" value="Javons-MacBook-Pro-2.local"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="70167199504340"/>
+    <label name="host" value="Javons-MacBook-Pro-2.local"/>
+  </labels>
+</ns2:test-suite>
