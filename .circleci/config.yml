@@ -13,16 +13,8 @@ jobs:
       steps:
         - checkout
 
-        # Build the app and run tests
-        - run:
-            name: Build and run tests
-            command: fastlane scan
-            environment:
-              SCAN_DEVICE: iPhone 6
-              SCAN_SCHEME: WebTests
-
         # run tests!
         - run:
             name: run tests
             command: |
-              platform=android bundle exec rake wordpress:test
+              platform=ios bundle exec rake wordpress:test
