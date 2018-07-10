@@ -25,7 +25,7 @@ jobs:
               bundle install --retry=3 --path vendor
 
         - run:
-            name: Check available simulators
+            name: Check available simulatorss
             command: instruments -s devices
 
         # run tests!
