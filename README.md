@@ -49,5 +49,18 @@ export JAVA_HOME=$\(/usr/libexec/java_home\) Remove \
 export PATH=${JAVA_HOME}/bin:$PATH
 export PATH=$ANDROID_HOME/emulator:$PATH)
 
+## Run test on Android
+
+platform=android bundle exec rake wordpress:test
+
+## Run test on iOS
+
+platform=ios bundle exec rake wordpress:test
+
+## Run test on both platforms
+
+platform=all bundle exec rake wordpress:test
+
+
 This software is provided "as is" and without any express or implied warranties, including, without limitation, 
 the implied warranties of merchantibility and fitness for a particular purpose.
