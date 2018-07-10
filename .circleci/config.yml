@@ -23,9 +23,10 @@ jobs:
             name: install dependencies
             command: |
               bundle install --retry=3 --path vendor
+              bundle update
 
         - run:
-            name: Check available simulatorss
+            name: Check available simulators
             command: instruments -s devices
 
         # run tests!
