@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
        - image: circleci/ruby:2.4.1-node-browsers
+       - image: bitrise-io/docker-android
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -19,13 +20,13 @@ jobs:
       - checkout
 
       - run:
-          name: pull apps
+          name: Pull Android App
           command: |
             wget -o /tmp/WordPress.apk http://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing
 
       - store_artifacts:
           path: /tmp/WordPress.apk
-          destination: artifact-file
+          destination: WordPressAndroid
 
       # Download and cache dependencies
       - restore_cache:
@@ -55,27 +56,8 @@ jobs:
       - store_test_results:
           path: /tmp/test-results
       - store_artifacts:
-          path: /tmp/app/WordPress.apk
-          destination: test-apps
-  # app:
-  #   docker:
-  #     # specify the version you desire here
-  #      - image: python:3.6.0-jessie
-  #   working_directory: ~/tmp
-  #   steps:
-  #     - run:
-  #         name: pull app
-  #         command: |
-  #           curl https://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing --output /tmp/app/WordPress.apk
-  #           curl https://drive.google.com/file/d/18ODObtGuG3UYhgst-6h6ucn79_kYTxwD/view?usp=sharing --output /tmp/app/WordPress.app
-  #      - store_artifacts:
-  #         path: /tmp/app/WordPress.apk
-# workflows:
-#   version: 2
-#   build_and_pull:
-#     jobs:
-#       - build
-#       - app
+          path: /tmp/test-results
+          destination: test-results
         
   
   
