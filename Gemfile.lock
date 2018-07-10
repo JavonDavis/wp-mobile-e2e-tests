@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/JavonDavis/parallel_appium.git
-  revision: 7e76371e6916462431f3d446b77abf40ee5de479
+  revision: 584c18919616cd278a289d99f0d997df553c1d84
   branch: develop
   specs:
     parallel_appium (0.2.1)
