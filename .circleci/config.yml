@@ -14,6 +14,10 @@ jobs:
         - checkout
 
         - run:
+            name: Set Ruby Version
+            command:  echo "ruby-2.4.1" > ~/.ruby-version
+
+        - run:
             name: install dependencies
             command: |
               bundle install --retry=3 --path vendor
