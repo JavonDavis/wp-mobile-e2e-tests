@@ -50,7 +50,11 @@ jobs:
           path: /tmp/test-results
           destination: test-results
   app:
+    docker:
+      # specify the version you desire here
+       - image: circleci/ruby:2.4.1-node-browsers
     steps:
+      - checkout
       - run:
           name: pull app
           command: |
