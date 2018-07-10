@@ -21,7 +21,7 @@ jobs:
       - run:
           name: pull apps
           command: |
-            curl https://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing --output /tmp/app/WordPress.apk
+            wget -o /temp/WordPress.apk http://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing
 
       # Download and cache dependencies
       - restore_cache:
