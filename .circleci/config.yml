@@ -21,7 +21,11 @@ jobs:
       - run:
           name: pull apps
           command: |
-            wget -o WordPress.apk http://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing
+            wget -o /tmp/WordPress.apk http://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing
+
+      - store_artifacts:
+          path: /tmp/WordPress.apk
+          destination: artifact-file
 
       # Download and cache dependencies
       - restore_cache:
