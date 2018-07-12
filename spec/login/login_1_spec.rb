@@ -34,7 +34,7 @@ describe "#{ENV['platform']}: Landing Page" do
 
     # Promotion texts for cards
     promo_texts = [
-        'Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you do.',
+        'Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you go.',
         'Watch readers from around the world read and interact with your site — in real time.',
         'Catch up with your favorite sites and join the conversation anywhere, any time.',
         'Your notifications travel with you — see comments and likes as they happen.',
