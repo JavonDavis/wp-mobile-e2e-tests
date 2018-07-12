@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/JavonDavis/parallel_appium.git
+  revision: 5d8462527fe21af7b1729ea205512cfa87eda850
+  branch: develop
+  specs:
+    parallel_appium (0.2.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -30,7 +37,6 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
-    parallel_appium (0.2.2)
     parallel_tests (2.21.3)
       parallel
     rake (12.3.1)
@@ -65,7 +71,7 @@ PLATFORMS
 DEPENDENCIES
   allure-rspec
   appium_lib
-  parallel_appium
+  parallel_appium!
   parallel_tests
   rake
   rspec
