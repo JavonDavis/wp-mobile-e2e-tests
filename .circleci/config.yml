@@ -27,7 +27,7 @@ jobs:
         - run:
             name: install appium
             command: |
-              npm install appium
+              npm install -g appium
 
         - run:
             name: Check available simulators
