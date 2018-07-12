@@ -3,4 +3,4 @@
 --require=./spec/spec_helper.rb
 --order defined
 --format RspecJunitFormatter
---o ./rspec/rspec.xml
+--out ./rspec/rspec.xml
