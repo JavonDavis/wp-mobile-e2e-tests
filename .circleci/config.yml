@@ -23,7 +23,11 @@ jobs:
             name: install dependencies
             command: |
               bundle install --retry=3 --path vendor
-              bundle update
+
+        - run:
+            name: install appium
+            command: |
+              npm install appium
 
         - run:
             name: Check available simulators
