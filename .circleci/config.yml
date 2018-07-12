@@ -20,12 +20,12 @@ jobs:
             command:  echo "ruby-2.4.1" > ~/.ruby-version
 
         - run:
-            name: install dependencies
+            name: Install Project Dependencies
             command: |
-              bundle install --retry=3 --path vendor
+              bundle check --path=vendor/bundle || bundle install --retry=3 --path vendor
 
         - run:
-            name: install appium
+            name: Install appium
             command: |
               npm install -g appium
 
@@ -38,8 +38,13 @@ jobs:
             name: Check available simulators
             command: instruments -s devices
 
+        - run: mkdir ./rspec
+
         # run tests!
         - run:
             name: run tests
             command: |
               platform=ios bundle exec rake wordpress:test
+
+        - store_test_results:
+            path: ./rspec
