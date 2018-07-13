@@ -46,7 +46,7 @@ jobs:
             command: |
               platform=ios bundle exec rake wordpress:test
 
-      - store_artifacts:
+        - store_artifacts:
             path: output/report
             destination: wordpress
 
