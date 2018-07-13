@@ -1,13 +1,14 @@
 require_relative '../../page_objects/landing_page'
+require_relative '../../common/common'
 
 ParallelAppium::Server.new.set_udid_environment_variable
 
 describe "#{ENV['platform']}: Landing Page" do
 
   before(:all) do
-    platform = caps[:platformName].to_sym
-    driver = start_driver
-    @landing_page = LandingPage.new driver, platform
+    @platform = caps[:platformName].to_sym
+    @driver = start_driver
+    @landing_page = LandingPage.new driver, @platform
   end
 
   it 'should successfully load landing page', ios: true, android: true do |t|
@@ -15,6 +16,7 @@ describe "#{ENV['platform']}: Landing Page" do
     t.step 'Check that landing page loaded' do
       expect(@landing_page.is_on_landing_page).to equal true
     end
+    helper.take_screenshot @driver
   end
 
   # Below are the following discrepencies found in the promo texts
@@ -31,6 +33,7 @@ describe "#{ENV['platform']}: Landing Page" do
     t.step 'Check that landing page loaded' do
       expect(@landing_page.is_on_landing_page).to equal true
     end
+    helper.take_screenshot @driver
 
     # Promotion texts for cards
     promo_texts = [
@@ -42,6 +45,8 @@ describe "#{ENV['platform']}: Landing Page" do
     ]
 
     promo_texts.each_with_index do |promo_text, i|
+      helper.take_screenshot @driver
+
       t.step "Check card ##{i}" do
         expect(@landing_page.promo_label_text).to eq promo_text
       end
@@ -53,6 +58,8 @@ describe "#{ENV['platform']}: Landing Page" do
 
     i = promo_texts.length - 1
     promo_texts.reverse_each do |promo_text|
+      helper.take_screenshot @driver
+
       t.step "Check card ##{i}" do
         expect(@landing_page.promo_label_text).to eq promo_text
       end

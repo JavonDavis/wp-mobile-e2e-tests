@@ -1,0 +1,10 @@
+[caps]
+platformName = "ios"
+deviceName = "iPhone Simulator"
+platformVersion = "11.4"
+app = "./apps/WordPress.app.zip"
+automationName = "XCUITest"
+bundleId = "org.wordpress"
+
+[appium_lib]
+wait = 2

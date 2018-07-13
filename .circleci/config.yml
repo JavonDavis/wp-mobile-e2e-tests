@@ -5,47 +5,56 @@
 version: 2
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-       - image: circleci/ruby:2.4.1-node-browsers
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
+      # Specify the Xcode version to use
+      macos:
+        xcode: "9.3.0"
 
-    working_directory: ~/repo
+      shell: /bin/bash --login -eo pipefail
 
-    steps:
-      - checkout
+      steps:
+        - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+        - run:
+            name: Set Ruby Version
+            command:  echo "ruby-2.4.1" > ~/.ruby-version
 
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
+        - run:
+            name: Install Project Dependencies
+            command: |
+              bundle check --path=vendor/bundle || bundle install --retry=3 --path vendor
 
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+        - run:
+            name: Install appium
+            command: |
+              npm install -g appium
 
+        - run:
+            name: Install allure
+            command: |
+              brew install allure
 
-      # run tests!
-      - run:
-          name: run tests
-          command: |
-            platform=android bundle exec rake wordpress:test
+        - run:
+            name: Download app file
+            command: |
+              curl -L -o ./apps/WordPress.app.zip "https://drive.google.com/uc?export=download&id=18ODObtGuG3UYhgst-6h6ucn79_kYTxwD"
 
-      # collect reports
-      - store_test_results:
-          path: /tmp/test-results
-      - store_artifacts:
-          path: /tmp/test-results
-          destination: test-results
+        - run:
+            name: Check available simulators
+            command: instruments -s devices
+
+        - run: mkdir ./output
+
+        # run tests!
+        - run:
+            name: run tests
+            command: |
+              platform=ios bundle exec rake wordpress:test
+
+        - store_test_results:
+            path: ./output
+
+        - store_artifacts:
+            path: wordpress-report
+            destination: wordpress
+
