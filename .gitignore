@@ -106,3 +106,4 @@ fabric.properties
 output/
 /vendor/
 /update_config.sh
+/wordpress-report/
