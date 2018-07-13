@@ -47,4 +47,4 @@ jobs:
               platform=ios bundle exec rake wordpress:test
 
         - store_test_results:
-            path: ./rspec
+            path: ./output
