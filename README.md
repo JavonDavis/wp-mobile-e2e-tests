@@ -1,10 +1,15 @@
 # Wordpress Mobile Automation
 
+[//]: # (Image References)
+[automationgif1]: ./readme/automation_sample.gif
+
 [![CircleCI](https://circleci.com/gh/JavonDavis/Wordpress-Open-Source-Automation-Ruby/tree/master.svg?style=svg)](https://circleci.com/gh/JavonDavis/Wordpress-Open-Source-Automation-Ruby/tree/master)
 
 This project demonstrates mobile app automated testing using the [parallel_appium gem](https://github.com/JavonDavis/parallel_appium) to do a lot of the heavy lifting. The 
 project demos the basics of testing with Appium and Ruby, shows some advanced techniques and through the gem uses SeleniumGrid
 to distribute tests across devices and execute tests in parallel.
+
+![Automation Gif][automationgif1]
 
 ## Getting setup
 
