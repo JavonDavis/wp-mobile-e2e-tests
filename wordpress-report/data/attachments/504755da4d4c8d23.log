@@ -1,0 +1,6 @@
+name: iPhone X
+platform: ios
+os: 11.4
+udid: 90036513-2B3B-4231-AF4C-335A5E2DC90C
+wdaPort: 8101
+thread: 1

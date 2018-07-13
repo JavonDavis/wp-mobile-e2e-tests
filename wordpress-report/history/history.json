@@ -1,0 +1,74 @@
+{
+  "d217b1b10b4f42058d7fd67961abd4c0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "880fef20e53a63ef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531443653708,
+        "stop" : 1531443659223,
+        "duration" : 5515
+      }
+    }, {
+      "uid" : "e58f04ced948c00d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531443249011,
+        "stop" : 1531443254505,
+        "duration" : 5494
+      }
+    }, {
+      "uid" : "53a82a68cdd0db92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531442644769,
+        "stop" : 1531442650255,
+        "duration" : 5486
+      }
+    } ]
+  },
+  "83806e61da621f2c9c008b38be25a513" : {
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "cb38107cfdb5d809",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531443659224,
+        "stop" : 1531443684917,
+        "duration" : 25693
+      }
+    }, {
+      "uid" : "731f9b0f270e4bb5",
+      "status" : "failed",
+      "statusDetails" : "\nexpected: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you go.\"\n     got: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you do.\"\n\n(compared using ==)\n",
+      "time" : {
+        "start" : 1531443254507,
+        "stop" : 1531443260393,
+        "duration" : 5886
+      }
+    }, {
+      "uid" : "f012f7406ba68333",
+      "status" : "failed",
+      "statusDetails" : "\nexpected: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you go.\"\n     got: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you do.\"\n\n(compared using ==)\n",
+      "time" : {
+        "start" : 1531442650256,
+        "stop" : 1531442656100,
+        "duration" : 5844
+      }
+    } ]
+  }
+}

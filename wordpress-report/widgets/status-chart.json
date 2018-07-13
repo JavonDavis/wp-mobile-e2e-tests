@@ -1,0 +1,21 @@
+[ {
+  "uid" : "880fef20e53a63ef",
+  "name" : "ios: Landing Page should successfully load landing page",
+  "time" : {
+    "start" : 1531443653708,
+    "stop" : 1531443659223,
+    "duration" : 5515
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cb38107cfdb5d809",
+  "name" : "ios: Landing Page should successfully load all promotion cards",
+  "time" : {
+    "start" : 1531443659224,
+    "stop" : 1531443684917,
+    "duration" : 25693
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

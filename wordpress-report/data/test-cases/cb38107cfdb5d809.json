@@ -1,0 +1,327 @@
+{
+  "uid" : "cb38107cfdb5d809",
+  "name" : "ios: Landing Page should successfully load all promotion cards",
+  "fullName" : "ios: Landing Page.ios: Landing Page should successfully load all promotion cards",
+  "historyId" : "83806e61da621f2c9c008b38be25a513",
+  "time" : {
+    "start" : 1531443659224,
+    "stop" : 1531443684917,
+    "duration" : 25693
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Check that landing page loaded",
+      "time" : {
+        "start" : 1531443659226,
+        "stop" : 1531443659337,
+        "duration" : 111
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check card #0",
+      "time" : {
+        "start" : 1531443678193,
+        "stop" : 1531443678391,
+        "duration" : 198
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Swipe card #0",
+      "time" : {
+        "start" : 1531443678391,
+        "stop" : 1531443679584,
+        "duration" : 1193
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check card #1",
+      "time" : {
+        "start" : 1531443675208,
+        "stop" : 1531443675423,
+        "duration" : 215
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Swipe card #1",
+      "time" : {
+        "start" : 1531443675423,
+        "stop" : 1531443676612,
+        "duration" : 1189
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check card #2",
+      "time" : {
+        "start" : 1531443673528,
+        "stop" : 1531443673739,
+        "duration" : 211
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Swipe card #2",
+      "time" : {
+        "start" : 1531443673739,
+        "stop" : 1531443675048,
+        "duration" : 1309
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check card #3",
+      "time" : {
+        "start" : 1531443671971,
+        "stop" : 1531443672196,
+        "duration" : 225
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Swipe card #3",
+      "time" : {
+        "start" : 1531443672196,
+        "stop" : 1531443673353,
+        "duration" : 1157
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check card #4",
+      "time" : {
+        "start" : 1531443670151,
+        "stop" : 1531443670345,
+        "duration" : 194
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Swipe card #4",
+      "time" : {
+        "start" : 1531443670345,
+        "stop" : 1531443671518,
+        "duration" : 1173
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "aad33ebc95563b58",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "aad33ebc95563b58.png",
+      "type" : "image/png",
+      "size" : 452817
+    }, {
+      "uid" : "80cfac75fa88bf21",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "80cfac75fa88bf21.png",
+      "type" : "image/png",
+      "size" : 401958
+    }, {
+      "uid" : "34b27851fd83e9f1",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "34b27851fd83e9f1.png",
+      "type" : "image/png",
+      "size" : 422763
+    }, {
+      "uid" : "57d242aa71cde2c",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "57d242aa71cde2c.png",
+      "type" : "image/png",
+      "size" : 372809
+    }, {
+      "uid" : "a2c676ad95615239",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "a2c676ad95615239.png",
+      "type" : "image/png",
+      "size" : 406326
+    }, {
+      "uid" : "a2c676ad95615239",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "a2c676ad95615239.png",
+      "type" : "image/png",
+      "size" : 406326
+    }, {
+      "uid" : "57d242aa71cde2c",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "57d242aa71cde2c.png",
+      "type" : "image/png",
+      "size" : 372809
+    }, {
+      "uid" : "34b27851fd83e9f1",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "34b27851fd83e9f1.png",
+      "type" : "image/png",
+      "size" : 422763
+    }, {
+      "uid" : "80cfac75fa88bf21",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "80cfac75fa88bf21.png",
+      "type" : "image/png",
+      "size" : 401958
+    }, {
+      "uid" : "16049ddfac8a2f4d",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "16049ddfac8a2f4d.png",
+      "type" : "image/png",
+      "size" : 452273
+    }, {
+      "uid" : "16049ddfac8a2f4d",
+      "name" : "screenshot-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "16049ddfac8a2f4d.png",
+      "type" : "image/png",
+      "size" : 452273
+    }, {
+      "uid" : "62b8af62c7d9c85d",
+      "name" : "video-90036513-2B3B-4231-AF4C-335A5E2DC90C",
+      "source" : "62b8af62c7d9c85d.mov",
+      "type" : "video/quicktime",
+      "size" : 19062211
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 12,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Javons-MBP-2"
+  }, {
+    "name" : "thread",
+    "value" : "70173054990300"
+  }, {
+    "name" : "suite",
+    "value" : "ios: Landing Page"
+  }, {
+    "name" : "testClass",
+    "value" : "ios: Landing Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "ios: Landing Page should successfully load all promotion cards"
+  }, {
+    "name" : "package",
+    "value" : "ios: Landing Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "731f9b0f270e4bb5",
+        "status" : "failed",
+        "statusDetails" : "\nexpected: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you go.\"\n     got: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you do.\"\n\n(compared using ==)\n",
+        "time" : {
+          "start" : 1531443254507,
+          "stop" : 1531443260393,
+          "duration" : 5886
+        }
+      }, {
+        "uid" : "f012f7406ba68333",
+        "status" : "failed",
+        "statusDetails" : "\nexpected: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you go.\"\n     got: \"Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you do.\"\n\n(compared using ==)\n",
+        "time" : {
+          "start" : 1531442650256,
+          "stop" : 1531442656100,
+          "duration" : 5844
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "cb38107cfdb5d809.json",
+  "parameterValues" : [ ]
+}

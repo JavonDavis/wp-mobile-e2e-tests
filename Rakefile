@@ -12,6 +12,26 @@ namespace :wordpress do
 
     ParallelAppium::ParallelAppium.new.start platform: platform, file_path: file_path
 
+    generate_report
+  end
+
+  def generate_report
+    puts 'Loading History...'
+    system 'rm -rf output/history'
+    system 'cp -r wordpress-report/history output/report/'
+    puts 'Loading environment properties....'
+    system 'cp environment.properties output/report/'
+    puts 'Loading categories.json....'
+    system 'cp categories.json output/report/'
+    puts 'Generating Report from...'
+
+    system "allure generate output/report/ --clean -o wordpress-report"
+  end
+
+  desc 'Open report'
+  task :report do |_t, _args|
+    puts 'Opening Report...'
+    system 'allure open wordpress-report'
   end
 
   desc 'Run bundle install'

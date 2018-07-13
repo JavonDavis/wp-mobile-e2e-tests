@@ -38,7 +38,7 @@ jobs:
             name: Check available simulators
             command: instruments -s devices
 
-        - run: mkdir ./rspec
+        - run: mkdir ./output
 
         # run tests!
         - run:

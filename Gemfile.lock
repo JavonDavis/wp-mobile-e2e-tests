@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/JavonDavis/parallel_appium.git
-  revision: 5d8462527fe21af7b1729ea205512cfa87eda850
-  branch: develop
-  specs:
-    parallel_appium (0.2.2)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -37,6 +30,7 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
+    parallel_appium (0.2.3)
     parallel_tests (2.21.3)
       parallel
     rake (12.3.1)
@@ -53,6 +47,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubyzip (1.2.1)
     selenium-webdriver (3.13.0)
       childprocess (~> 0.5)
@@ -71,10 +67,11 @@ PLATFORMS
 DEPENDENCIES
   allure-rspec
   appium_lib
-  parallel_appium!
+  parallel_appium
   parallel_tests
   rake
   rspec
+  rspec_junit_formatter
 
 BUNDLED WITH
    1.16.2

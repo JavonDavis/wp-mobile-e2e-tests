@@ -1,0 +1,136 @@
+2018-07-13 01:00:31:576 - info: [Appium] Welcome to Appium v1.7.2
+2018-07-13 01:00:31:577 - info: [Appium] Non-default server args:
+2018-07-13 01:00:31:578 - info: [Appium]   port: 4725
+2018-07-13 01:00:31:578 - info: [Appium]   log: /Users/javon/Projects/WordpressAutomation/output/appium-90036513-2B3B-4231-AF4C-335A5E2DC90C.log
+2018-07-13 01:00:31:595 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4725
+2018-07-13 01:00:39:069 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"platformName":"ios","deviceName":"iPhone X","platformVersion":"11.4","app":"/Users/javon/Projects/WordpressAutomation/apps/WordPress.app.zip","automationName":"XCUITest","bundleId":"org.wordpress","udid":"90036513-2B3B-4231-AF4C-335A5E2DC90C","wdaLocalPort":8101,"sessionOverride":true,"useNewWDA":true,"noReset":true,"fullReset":false},"capabilities":{"alwaysMatch":{"platformName":"ios","appium:deviceName":"iPhone X","appium:platformVersion":"11.4","appium:app":"/Users/javon/Projects/WordpressAutomation/apps/WordPress.app.zip","appium:automationName":"XCUITest","appium:bundleId":"org.wordpress","appium:udid":"90036513-2B3B-4231-AF4C-335A5E2DC90C","appium:wdaLocalPort":8101,"appium:sessionOverride":true,"appium:useNewWDA":true,"appium:noReset":true,"appium:fullReset":false},"firstMatch":[{}]}}
+2018-07-13 01:00:39:071 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"platformName":"ios","deviceName":"iPhone X","platformVersion":"11.4","app":"/Users/javon/Projects/WordpressAutomation/apps/WordPress.app.zip","automationName":"XCUITest","bundleId":"org.wordpress","udid":"90036513-2B3B-4231-AF4C-335A5E2DC90C","wdaLocalPort":8101,"sessionOverride":true,"useNewWDA":true,"noReset":true,"fullReset":false},null,{"alwaysMatch":{"platformName":"ios","appium:deviceName":"iPhone X","appium:platformVersion":"11.4","appium:app":"/Users/javon/Projects/WordpressAutomation/apps/WordPress.app.zip","appium:automationName":"XCUITest","appium:bundleId":"org.wordpress","appium:udid":"90036513-2B3B-4231-AF4C-335A5E2DC90C","appium:wdaLocalPort":8101,"appium:sessionOverride":true,"appium:useNewWDA":true,"appium:noReset":true,"appium:fullReset":false},"firstMatch":[{}]}]
+2018-07-13 01:00:39:072 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1531443639072 (20:00:39 GMT-0500 (EST))
+2018-07-13 01:00:39:073 - info: [Appium] Merged W3C capabilities {"alwaysMatch":{"platformName":"ios","appium:de... into desiredCapabilities object {"platformName":"ios","deviceName":"iPhone X","...
+2018-07-13 01:00:39:075 - info: [Appium] Creating new XCUITestDriver (v2.64.0) session
+2018-07-13 01:00:39:075 - info: [Appium] Capabilities:
+2018-07-13 01:00:39:075 - info: [Appium]   platformName: ios
+2018-07-13 01:00:39:075 - info: [Appium]   deviceName: iPhone X
+2018-07-13 01:00:39:075 - info: [Appium]   platformVersion: 11.4
+2018-07-13 01:00:39:075 - info: [Appium]   app: /Users/javon/Projects/WordpressAutomation/apps/WordPress.app.zip
+2018-07-13 01:00:39:075 - info: [Appium]   automationName: XCUITest
+2018-07-13 01:00:39:075 - info: [Appium]   bundleId: org.wordpress
+2018-07-13 01:00:39:076 - info: [Appium]   udid: 90036513-2B3B-4231-AF4C-335A5E2DC90C
+2018-07-13 01:00:39:076 - info: [Appium]   wdaLocalPort: 8101
+2018-07-13 01:00:39:076 - info: [Appium]   sessionOverride: true
+2018-07-13 01:00:39:076 - info: [Appium]   useNewWDA: true
+2018-07-13 01:00:39:076 - info: [Appium]   noReset: true
+2018-07-13 01:00:39:076 - info: [Appium]   fullReset: false
+2018-07-13 01:00:39:083 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: sessionOverride.
+2018-07-13 01:00:39:084 - info: [BaseDriver] Session created with session id: fa9df76c-ee5a-4a76-939b-85783fc92348
+2018-07-13 01:00:39:111 - info: [debug] [XCUITest] Current user: 'javon'
+2018-07-13 01:00:40:204 - info: [debug] [XCUITest] Current version of libimobiledevice: stable 1.2.0 (bottled), HEAD
+2018-07-13 01:00:40:417 - info: [debug] [XCUITest] Xcode version set to '9.4.1' (tools v9.4.1.0.1.1528165917)
+2018-07-13 01:00:40:425 - info: [debug] [XCUITest] iOS SDK Version set to '11.4'
+2018-07-13 01:00:40:426 - info: [debug] [BaseDriver] Event 'xcodeDetailsRetrieved' logged at 1531443640426 (20:00:40 GMT-0500 (EST))
+2018-07-13 01:00:40:682 - info: [iOSSim] Constructing iOS simulator for Xcode version 9.4.1 with udid '90036513-2B3B-4231-AF4C-335A5E2DC90C'
+2018-07-13 01:00:40:682 - info: [XCUITest] Determining device to run tests on: udid: '90036513-2B3B-4231-AF4C-335A5E2DC90C', real device: false
+2018-07-13 01:00:40:684 - info: [BaseDriver] Using local app '/Users/javon/Projects/WordpressAutomation/apps/WordPress.app.zip'
+2018-07-13 01:00:40:684 - info: [debug] [BaseDriver] Copying local zip to tmp dir
+2018-07-13 01:00:40:872 - info: [BaseDriver] Unzipping local app '/var/folders/b8/6c0s6x3x205ck3l_9m6cx2qh0000gp/T/2018612-36952-1i6zwsc.7ljlg/appium-app.zip'...
+2018-07-13 01:00:40:887 - info: [debug] [BaseDriver] Unzipping /var/folders/b8/6c0s6x3x205ck3l_9m6cx2qh0000gp/T/2018612-36952-1i6zwsc.7ljlg/appium-app.zip
+2018-07-13 01:00:40:888 - info: [debug] [BaseDriver] Testing zip archive: /var/folders/b8/6c0s6x3x205ck3l_9m6cx2qh0000gp/T/2018612-36952-1i6zwsc.7ljlg/appium-app.zip
+2018-07-13 01:00:42:928 - info: [BaseDriver] Unzipped local app to '/var/folders/b8/6c0s6x3x205ck3l_9m6cx2qh0000gp/T/2018612-36952-1i6zwsc.7ljlg/WordPress.app'
+2018-07-13 01:00:42:929 - info: [debug] [BaseDriver] Event 'appConfigured' logged at 1531443642929 (20:00:42 GMT-0500 (EST))
+2018-07-13 01:00:42:929 - info: [debug] [XCUITest] Checking whether app '/var/folders/b8/6c0s6x3x205ck3l_9m6cx2qh0000gp/T/2018612-36952-1i6zwsc.7ljlg/WordPress.app' is actually present on file system
+2018-07-13 01:00:42:929 - info: [debug] [XCUITest] App is present
+2018-07-13 01:00:42:930 - info: [debug] [BaseDriver] Event 'resetStarted' logged at 1531443642929 (20:00:42 GMT-0500 (EST))
+2018-07-13 01:00:42:930 - info: [debug] [XCUITest] Reset: noReset is on. Leaving simulator as is
+2018-07-13 01:00:42:930 - info: [debug] [BaseDriver] Event 'resetComplete' logged at 1531443642930 (20:00:42 GMT-0500 (EST))
+2018-07-13 01:00:43:028 - info: [debug] [XCUITest] Starting log capture for iOS Simulator with udid '90036513-2B3B-4231-AF4C-335A5E2DC90C', using 'xcrun simctl spawn 90036513-2B3B-4231-AF4C-335A5E2DC90C log stream --style compact'
+2018-07-13 01:00:43:239 - info: [debug] [BaseDriver] Event 'logCaptureStarted' logged at 1531443643239 (20:00:43 GMT-0500 (EST))
+2018-07-13 01:00:43:239 - info: [XCUITest] Setting up simulator
+2018-07-13 01:00:43:240 - info: [debug] [iOS] No reason to set locale
+2018-07-13 01:00:43:240 - info: [debug] [iOS] No iOS / app preferences to set
+2018-07-13 01:00:43:244 - info: [debug] [iOSSim] Matched 1 Simulator cache item for cleanup: /Users/javon/Library/Developer/CoreSimulator/Devices/90036513-2B3B-4231-AF4C-335A5E2DC90C/data/Library/Caches/com.apple.mobile.installd.staging
+2018-07-13 01:00:43:245 - info: [debug] [iOSSim] Setting common Simulator preferences to {"ConnectHardwareKeyboard":false}
+2018-07-13 01:00:43:251 - info: [debug] [iOSSim] Updated 90036513-2B3B-4231-AF4C-335A5E2DC90C Simulator preferences at '/Users/javon/Library/Preferences/com.apple.iphonesimulator.plist' with {"ConnectHardwareKeyboard":false}
+2018-07-13 01:00:43:647 - info: [debug] [iOSSim] The count of running Simulator UI client instances is 1
+2018-07-13 01:00:43:647 - info: [iOSSim] Both Simulator with UDID 90036513-2B3B-4231-AF4C-335A5E2DC90C and the UI client are currently running
+2018-07-13 01:00:43:648 - info: [debug] [BaseDriver] Event 'simStarted' logged at 1531443643648 (20:00:43 GMT-0500 (EST))
+2018-07-13 01:00:43:777 - info: [debug] [XCUITest] App 'org.wordpress' is already installed. No need to reinstall.
+2018-07-13 01:00:43:778 - info: [debug] [BaseDriver] Event 'appInstalled' logged at 1531443643778 (20:00:43 GMT-0500 (EST))
+2018-07-13 01:00:43:779 - info: [XCUITest] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+2018-07-13 01:00:43:779 - info: [XCUITest] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj'
+2018-07-13 01:00:43:891 - info: [debug] [XCUITest] No obsolete cached processes from previous WDA sessions listening on port 8101 have been found
+2018-07-13 01:00:43:891 - info: [debug] [XCUITest] Capability 'useNewWDA' set to true, so uninstalling WDA before proceeding
+2018-07-13 01:00:43:891 - info: [XCUITest] Shutting down sub-processes
+2018-07-13 01:00:43:892 - info: [debug] [XCUITest] Removing WDA application from device
+2018-07-13 01:00:45:013 - info: [debug] [BaseDriver] Event 'wdaUninstalled' logged at 1531443645013 (20:00:45 GMT-0500 (EST))
+2018-07-13 01:00:45:014 - info: [debug] [BaseDriver] Event 'wdaStartAttempted' logged at 1531443645014 (20:00:45 GMT-0500 (EST))
+2018-07-13 01:00:45:014 - info: [XCUITest] Launching WebDriverAgent on the device
+2018-07-13 01:00:45:016 - info: [debug] [XCUITest] Carthage found: '/usr/local/bin/carthage'
+2018-07-13 01:00:45:017 - info: [debug] [XCUITest] Killing running processes 'xcodebuild.*90036513-2B3B-4231-AF4C-335A5E2DC90C, iproxy 8101, 90036513-2B3B-4231-AF4C-335A5E2DC90C.*XCTRunner' for the device 90036513-2B3B-4231-AF4C-335A5E2DC90C...
+2018-07-13 01:00:45:070 - info: [debug] [XCUITest] 'pgrep -nif xcodebuild.*90036513-2B3B-4231-AF4C-335A5E2DC90C' didn't detect any matching processes. Return code: 1
+2018-07-13 01:00:45:117 - info: [debug] [XCUITest] 'pgrep -nif iproxy 8101' didn't detect any matching processes. Return code: 1
+2018-07-13 01:00:45:161 - info: [debug] [XCUITest] 'pgrep -nif 90036513-2B3B-4231-AF4C-335A5E2DC90C.*XCTRunner' didn't detect any matching processes. Return code: 1
+2018-07-13 01:00:45:162 - info: [debug] [XCUITest] Using Xcode 9.4.1, so fixing WDA codebase
+2018-07-13 01:00:45:166 - info: [debug] [XCUITest] Beginning test with command 'xcodebuild build-for-testing test-without-building -project /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination id=90036513-2B3B-4231-AF4C-335A5E2DC90C IPHONEOS_DEPLOYMENT_TARGET=11.4' in directory '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+2018-07-13 01:00:45:167 - info: [debug] [XCUITest] Output from xcodebuild will not be logged. To see xcode logging, use 'showXcodeLog' desired capability
+2018-07-13 01:00:45:821 - info: [debug] [XCUITest] Waiting up to 60000ms for WebDriverAgent to start
+2018-07-13 01:00:45:823 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:46:346 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:46:467 - info: [debug] [XCUITest] Log file for xcodebuild test: /var/folders/b8/6c0s6x3x205ck3l_9m6cx2qh0000gp/T/com.apple.dt.XCTest/IDETestRunSession-52A6F476-3B63-4CDF-959A-94C48745DB6F/WebDriverAgentRunner-870A6187-6927-4717-9F13-ADCC756B416F/Session-WebDriverAgentRunner-2018-07-12_200046-s4fe6h.log
+2018-07-13 01:00:46:853 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:47:363 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:47:866 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:48:375 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:48:879 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:49:386 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:49:891 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:50:396 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+2018-07-13 01:00:50:408 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n    \"state\" : \"success\",\n    \"os\" : {\n      \"name\" : \"iOS\",\n      \"version\" : \"11.4\",\n      \"sdkVersion\" : \"11.3\"\n    },\n    \"ios\" : {\n      \"simulatorVersion\" : \"11.4\",\n      \"ip\" : \"10.0.29.94\"\n    },\n    \"build\" : {\n      \"time\" : \"Jul  5 2018 18:30:58\"\n    }\n  },\n  \"sessionId\" : \"E9A8A1CF-879D-46B9-B0F5-2D84513C1BD1\",\n  \"status\" : 0\n}"
+2018-07-13 01:00:50:408 - info: [debug] [XCUITest] WebDriverAgent running on ip '10.0.29.94'
+2018-07-13 01:00:50:409 - info: [debug] [XCUITest] WebDriverAgent successfully started after 5241ms
+2018-07-13 01:00:50:410 - info: [debug] [BaseDriver] Event 'wdaSessionAttempted' logged at 1531443650410 (20:00:50 GMT-0500 (EST))
+2018-07-13 01:00:50:410 - info: [debug] [XCUITest] Sending createSession command to WDA
+2018-07-13 01:00:50:412 - info: [debug] [JSONWP Proxy] Proxying [POST /session] to [POST http://localhost:8101/session] with body: {"desiredCapabilities":{"bundleId":"org.wordpress","arguments":[],"environment":{},"shouldWaitForQuiescence":true,"shouldUseTestManagerForVisibilityDetection":false,"maxTypingFrequency":60,"shouldUseSingletonTestManager":true}}
+2018-07-13 01:00:53:677 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"sessionId":"1152B933-B4EE-4CB2-BB5E-E5F180C4B1CC","capabilities":{"device":"iphone","browserName":"WordPress","sdkVersion":"11.4","CFBundleIdentifier":"org.wordpress"}},"sessionId":"1152B933-B4EE-4CB2-BB5E-E5F180C4B1CC","status":0}
+2018-07-13 01:00:53:677 - info: [debug] [BaseDriver] Event 'wdaSessionStarted' logged at 1531443653677 (20:00:53 GMT-0500 (EST))
+2018-07-13 01:00:53:677 - info: [debug] [BaseDriver] Event 'wdaStarted' logged at 1531443653677 (20:00:53 GMT-0500 (EST))
+2018-07-13 01:00:53:678 - info: [XCUITest] Skipping setting of the initial display orientation. Set the "orientation" capability to either "LANDSCAPE" or "PORTRAIT", if this is an undesired behavior.
+2018-07-13 01:00:53:678 - info: [debug] [BaseDriver] Event 'orientationSet' logged at 1531443653678 (20:00:53 GMT-0500 (EST))
+2018-07-13 01:00:53:678 - info: [Appium] New XCUITestDriver session created successfully, session fa9df76c-ee5a-4a76-939b-85783fc92348 added to master session list
+2018-07-13 01:00:53:679 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1531443653679 (20:00:53 GMT-0500 (EST))
+2018-07-13 01:00:53:679 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"webStorageEnabled":false,"locationContextEnabled":false,"browserName":"","platform":"MAC","javascriptEnabled":true,"databaseEnabled":false,"takesScreenshot":true,"networkConnectionEnabled":false,"platformName":"ios","deviceName":"iPhone X","platformVersion":"11.4","app":"/Users/javon/Projects/WordpressAutomation/apps/WordPress.app.zip","automationName":"XCUITest","bundleId":"org.wordpress","udid":"90036513-2B3B-4231-AF4C-335A5E2DC90C","wdaLocalPort":8101,"sessionOverride":true,"useNewWDA":true,"noReset":true,"fullReset":false}
+2018-07-13 01:00:53:682 - info: [HTTP] <-- POST /wd/hub/session 200 14612 ms - 606 
+2018-07-13 01:00:53:684 - info: [HTTP] --> POST /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/timeouts/implicit_wait {"ms":2000}
+2018-07-13 01:00:53:685 - info: [debug] [MJSONWP] Calling AppiumDriver.implicitWait() with args: [2000,"fa9df76c-ee5a-4a76-939b-85783fc92348"]
+2018-07-13 01:00:53:686 - info: [debug] [XCUITest] Executing command 'implicitWait'
+2018-07-13 01:00:53:687 - info: [debug] [BaseDriver] Set implicit wait to 2000ms
+2018-07-13 01:00:53:690 - info: [debug] [MJSONWP] Responding to client with driver.implicitWait() result: null
+2018-07-13 01:00:53:691 - info: [HTTP] <-- POST /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/timeouts/implicit_wait 200 6 ms - 76 
+2018-07-13 01:00:53:693 - info: [HTTP] --> GET /wd/hub/status {}
+2018-07-13 01:00:53:693 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2018-07-13 01:00:53:707 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.7.2","revision":null}}
+2018-07-13 01:00:53:708 - info: [HTTP] <-- GET /wd/hub/status 200 14 ms - 83 
+2018-07-13 01:00:53:714 - info: [HTTP] --> POST /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/element {"using":"accessibility id","value":"Log In Button"}
+2018-07-13 01:00:53:715 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["accessibility id","Log In Button","fa9df76c-ee5a-4a76-939b-85783fc92348"]
+2018-07-13 01:00:53:716 - info: [debug] [XCUITest] Executing command 'findElement'
+2018-07-13 01:00:53:717 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2018-07-13 01:00:53:718 - info: [debug] [BaseDriver] Waiting up to 2000 ms for condition
+2018-07-13 01:00:53:721 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8101/session/1152B933-B4EE-4CB2-BB5E-E5F180C4B1CC/element] with body: {"using":"accessibility id","value":"Log In Button"}
+2018-07-13 01:00:53:791 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"E83582ED-6A42-4D43-8462-AD25A9888934"},"sessionId":"1152B933-B4EE-4CB2-BB5E-E5F180C4B1CC","status":0}
+2018-07-13 01:00:53:791 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"E83582ED-6A42-4D43-8462-AD25A9888934"}
+2018-07-13 01:00:53:792 - info: [HTTP] <-- POST /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/element 200 78 ms - 122 
+2018-07-13 01:00:53:795 - info: [HTTP] --> GET /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/screenshot {}
+2018-07-13 01:00:53:796 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["fa9df76c-ee5a-4a76-939b-85783fc92348"]
+2018-07-13 01:00:53:796 - info: [debug] [XCUITest] Executing command 'getScreenshot'
+2018-07-13 01:00:53:797 - info: [debug] [XCUITest] Taking screenshot with WDA
+2018-07-13 01:00:53:801 - info: [debug] [JSONWP Proxy] Proxying [GET /screenshot] to [GET http://localhost:8101/session/1152B933-B4EE-4CB2-BB5E-E5F180C4B1CC/screenshot] with no body
+2018-07-13 01:00:53:940 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : \"iVBORw0KGgoAAAANSUhEUgAABGUAAAmECAIAAAAjR0TuAAAAAXNSR0IArs4c6QAA\\r\\nABxpRE9UAAAAAgAAAAAAAATCAAAAKAAABMIAAATCAARUrwt6oiQAAEAASURBVHgB\\r\\n7L2HnxzXce3\\/\\/jn7SSIJ0pL8\\/LOfZVGRkiyRBDbnjEXOAHMAwUyCyaKyxScqSyQB\\r\\n7E7o7pmetHkn5zz3963uBQhRK4OrQFNW8XO1Hsz0dPecuXdc556qU\\/9rJNrWoQgo\\r\\nAoqAIqAIKAKKgCKgCCgCioAi8PsI\\/K\\/ff0qfUQQUAUVAEVAEFAFFQBFQBBQBRUAR\\r\\nAAHlSyqvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFybQioAgoAoqAIqAIKAKK\\r\\ngCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKg\\r\\nCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsCypd2x0WZtCKgCCgC\\r\\nioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFmbQi\\r\\noAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bH\\r\\nRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsC\\r\\nypd2x0WZtCKgCCgCioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqA\\r\\nIrA7AsqXdsdFmbQioAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAI\\r\\nKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKK\\r\\ngCKgCCgCi...
+2018-07-13 01:00:54:021 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABGUAAAmECAIAAAAjR0TuAAAAAXNSR0IArs4c6QAA\r\nABxpRE9UAAAAAgAAAAAAAATCAAAAKAAABMIAAATCAARUrwt6oiQAAEAASURBVHgB\r\n7L2HnxzXce3//jn7SSIJ0pL8/LOfZVGRkiyRBDbnjEXOAHMAwUyCyaKyxScqSyQB\r\n7E7o7pmetHkn5zz3963uBQhRK4OrQFNW8XO1Hsz0dPecuXdc556qU/9rJNrWoQgo\r\nAoqAIqAIKAKKgCKgCCgCioAi8PsI/K/ff0qfUQQUAUVAEVAEFAFFQBFQBBQBRUAR\r\nAAHlSyqvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFybQioAgoAoqAIqAIKAKK\r\ngCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKg\r\nCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsCypd2x0WZtCKgCCgC\r\nioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFmbQi\r\noAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bH\r\nRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsC\r\nypd2x0WZtCKgCCgCioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqA\r\nIrA7AsqXdsdFmbQioAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAI\r\nKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKK\r\ngCKgCCgCioAisDsCypd2x0WZtCKgCCgCioAioAgoAoqAIqAIKALKl5QvKQKKgCKg\r\n...
+2018-07-13 01:00:54:031 - info: [HTTP] <-- GET /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/screenshot 200 235 ms - 662574 
+2018-07-13 01:00:59:047 - info: [HTTP] --> GET /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/screenshot {}
+2018-07-13 01:00:59:048 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["fa9df76c-ee5a-4a76-939b-85783fc92348"]
+2018-07-13 01:00:59:048 - info: [debug] [XCUITest] Executing command 'getScreenshot'
+2018-07-13 01:00:59:048 - info: [debug] [XCUITest] Taking screenshot with WDA
+2018-07-13 01:00:59:049 - info: [debug] [JSONWP Proxy] Proxying [GET /screenshot] to [GET http://localhost:8101/session/1152B933-B4EE-4CB2-BB5E-E5F180C4B1CC/screenshot] with no body
+2018-07-13 01:00:59:184 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : \"iVBORw0KGgoAAAANSUhEUgAABGUAAAmECAIAAAAjR0TuAAAAAXNSR0IArs4c6QAA\\r\\nABxpRE9UAAAAAgAAAAAAAATCAAAAKAAABMIAAATCAARUrwt6oiQAAEAASURBVHgB\\r\\n7L2HnxzXce3\\/\\/jn7SSIJ0pL8\\/LOfZVGRkiyRBDbnjEXOAHMAwUyCyaKyxScqSyQB\\r\\n7E7o7pmetHkn5zz3963uBQhRK4OrQFNW8XO1Hsz0dPecuXdc556qU\\/9rJNrWoQgo\\r\\nAoqAIqAIKAKKgCKgCCgCioAi8PsI\\/K\\/ff0qfUQQUAUVAEVAEFAFFQBFQBBQBRUAR\\r\\nAAHlSyqvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFybQioAgoAoqAIqAIKAKK\\r\\ngCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKg\\r\\nCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsCypd2x0WZtCKgCCgC\\r\\nioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFmbQi\\r\\noAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bH\\r\\nRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsC\\r\\nypd2x0WZtCKgCCgCioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqA\\r\\nIrA7AsqXdsdFmbQioAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAI\\r\\nKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKK\\r\\ngCKgCCgCi...
+2018-07-13 01:00:59:189 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABGUAAAmECAIAAAAjR0TuAAAAAXNSR0IArs4c6QAA\r\nABxpRE9UAAAAAgAAAAAAAATCAAAAKAAABMIAAATCAARUrwt6oiQAAEAASURBVHgB\r\n7L2HnxzXce3//jn7SSIJ0pL8/LOfZVGRkiyRBDbnjEXOAHMAwUyCyaKyxScqSyQB\r\n7E7o7pmetHkn5zz3963uBQhRK4OrQFNW8XO1Hsz0dPecuXdc556qU/9rJNrWoQgo\r\nAoqAIqAIKAKKgCKgCCgCioAi8PsI/K/ff0qfUQQUAUVAEVAEFAFFQBFQBBQBRUAR\r\nAAHlSyqvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFybQioAgoAoqAIqAIKAKK\r\ngCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKg\r\nCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsCypd2x0WZtCKgCCgC\r\nioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqAIrA7AsqXdsdFmbQi\r\noAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAIKAKKgCKwOwLKl3bH\r\nRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKKgCKgCCgCioAisDsC\r\nypd2x0WZtCKgCCgCioAioAgoAoqAIqAIKALKl5QvKQKKgCKgCCgCioAioAgoAoqA\r\nIrA7AsqXdsdFmbQioAgoAoqAIqAIKAKKgCKgCCgCypeULykCioAioAgoAoqAIqAI\r\nKAKKgCKwOwLKl3bHRZm0IqAIKAKKgCKgCCgCioAioAgoAsqXlC8pAoqAIqAIKAKK\r\ngCKgCCgCioAisDsCypd2x0WZtCKgCCgCioAioAgoAoqAIqAIKALKl5QvKQKKgCKg\r\n...
+2018-07-13 01:00:59:194 - info: [HTTP] <-- GET /wd/hub/session/fa9df76c-ee5a-4a76-939b-85783fc92348/screenshot 200 146 ms - 641562 
