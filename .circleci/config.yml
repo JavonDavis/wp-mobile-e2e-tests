@@ -9,7 +9,7 @@ jobs:
       - image: circleci/android:api-28-alpha
     steps:
       - checkout
-
+      - run: mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
       - run:
           name: install node dependencies
           command: |
