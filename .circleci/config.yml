@@ -10,7 +10,8 @@ jobs:
     steps:
       - checkout
 
-      - run: adb devices -l
+      - run: |
+          echo no | Android/Sdk/tools/bin/avdmanager create avd --force --name testAVD --abi google_apis/x86_64 --package 'system-images;android-28;google_apis;x86_64
   ios:
 
       # Specify the Xcode version to use
