@@ -3,7 +3,6 @@
 # The class should be defined as the Parent class for all page
 # objects in the project. It provides useful methods for
 # interacting with elements and validating presence
-
 class BasePage
   # time in seconds
   DEFAULT_WAIT_TIME = 6

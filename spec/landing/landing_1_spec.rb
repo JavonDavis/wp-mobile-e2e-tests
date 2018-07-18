@@ -14,12 +14,12 @@ describe "#{ENV['platform']}: Landing Page" do
   it 'should successfully load landing page', ios: true, android: true do |t|
 
     t.step 'Check that landing page loaded' do
-      expect(@landing_page.is_on_landing_page).to equal true
+      expect(@landing_page.on_landing_page?).to equal true
     end
     helper.take_screenshot @driver
   end
 
-  # Below are the following discrepencies found in the promo texts
+  # Below are the following discrepancies found in the promo texts
   # android 'Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you go.'
   # ios 'Publish from the park. Blog from the bus. Comment from the café. WordPress goes where you do.'
   #
@@ -31,7 +31,7 @@ describe "#{ENV['platform']}: Landing Page" do
   # ios 'Manage your Jetpack-powered site on the go — you‘ve got WordPress in your pocket.'
   it 'should successfully load all promotion cards', ios: true, android:true do |t|
     t.step 'Check that landing page loaded' do
-      expect(@landing_page.is_on_landing_page).to equal true
+      expect(@landing_page.on_landing_page?).to equal true
     end
     helper.take_screenshot @driver
 
