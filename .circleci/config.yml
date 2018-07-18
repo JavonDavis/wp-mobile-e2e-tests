@@ -24,7 +24,9 @@ jobs:
           command: export LD_LIBRARY_PATH=${ANDROID_HOME}/emulator/lib64:${ANDROID_HOME}/emulator/lib64/qt/lib && emulator64-arm -avd test -noaudio -no-boot-anim -no-window -accel on
           background: true
 
-      - run: sleep 10
+      - run:
+          name: Wait on emulator
+          command: sleep 10
 
       - run:
           name: List running emulators
@@ -32,6 +34,20 @@ jobs:
       - run:
           name: Set Ruby Version
           command:  echo "ruby-2.4.1" > ~/.ruby-version
+      - run:
+          name: Install Project Dependencies
+          command: |
+            bundle check --path=vendor/bundle || bundle install --retry=3 --path vendor
+
+      - run:
+          name: Install appium
+          command: |
+            npm install -g appium
+
+      - run:
+          name: Install allure
+          command: |
+            brew install allure
 
   ios:
 
