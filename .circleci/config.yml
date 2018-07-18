@@ -11,26 +11,9 @@ jobs:
     steps:
       - checkout
 
-      - run: git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+      - run: node -v
 
-      - run:
-          name: Install node
-          command: |
-              export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig:/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH
-              export LINUXBREWHOME=$HOME/.linuxbrew
-              export PATH=$LINUXBREWHOME/bin:$PATH
-              export MANPATH=$LINUXBREWHOME/man:$MANPATH
-              export PKG_CONFIG_PATH=$LINUXBREWHOME/lib64/pkgconfig:$LINUXBREWHOME/lib/pkgconfig:$PKG_CONFIG_PATH
-              export LD_LIBRARY_PATH=$LINUXBREWHOME/lib64:$LINUXBREWHOME/lib:$LD_LIBRARY_PATH
-              ln -s $(which gcc) ~/.linuxbrew/bin/gcc-4.4
-              ln -s $(which g++) ~/.linuxbrew/bin/g++-4.4
-
-
-      - run: brew install node
-
-      - run: which npm
-
-      - run: sudo npm install --prefix ./modules appium
+      - run: npm -v
 
       - run:
           name: List available images
