@@ -108,3 +108,4 @@ output/
 /update_config.sh
 /wordpress-report/
 .DS_STORE
+node_configs

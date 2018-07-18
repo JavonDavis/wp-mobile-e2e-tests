@@ -1,1 +1,0 @@
-{"capabilities":[{"browserName":"90036513-2B3B-4231-AF4C-335A5E2DC90C","maxInstances":5,"platform":"ios"}],"configuration":{"cleanUpCycle":2000,"timeout":1800000,"registerCycle":5000,"proxy":"org.openqa.grid.selenium.proxy.DefaultRemoteProxy","url":"http://127.0.0.1:4002/wd/hub","host":"127.0.0.1","port":4002,"maxSession":5,"register":true,"hubPort":4444,"hubHost":"localhost"}}
