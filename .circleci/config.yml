@@ -8,20 +8,20 @@ jobs:
     docker:
       - image: circleci/android:api-28-alpha
       - image: circleci/node:10-browsers
-        command: [npm, node]
+        command: [npm install -g appium, node]
     steps:
       - checkout
 
       - run: sudo apt-get update
 
-      - run: npm istall appium
+      - run:     appium
 
       - run:
           name: Install node
           command: |
               curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
               sudo apt-get install -y nodejs
-              sudo apt-get install -y build-essential
+              sudo apt-get install -y build-es sential
               sudo apt-get install build-essential curl git m4 python-setuptools ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
 
       - run: sudo npm install appium
