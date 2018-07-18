@@ -4,6 +4,9 @@
 #
 version: 2
 jobs:
+  machine:
+    node:
+      version: 8.11.3
   android:
     docker:
       - image: circleci/android:api-28-alpha
@@ -22,6 +25,8 @@ jobs:
               sudo apt-get install build-essential curl git m4 python-setuptools ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
 
       - run: mkdir modules
+
+      - run: which npm
 
       - run: sudo npm install --prefix ./modules appium
 
