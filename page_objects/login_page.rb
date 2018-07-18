@@ -11,7 +11,7 @@ class LoginPage < BasePage
   end
 
   def login_label_text
-    if @platform == 'ios'
+    if @platform == :ios
       text_elements = @driver.find_elements @login_locators[:login_label]
       return text_elements[1].text
     end
