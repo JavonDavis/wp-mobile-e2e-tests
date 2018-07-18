@@ -15,6 +15,11 @@ jobs:
           command: |
             sdkmanager --list --verbose | grep system-images
 
+      - run:
+          name: Setup emulator
+          command: |
+            sdkmanager "system-images;android-28;google_apis;x86" && echo "no" | avdmanager create avd -n test -k "system-images;android-28;google_apis;x86"
+
   ios:
 
       # Specify the Xcode version to use
