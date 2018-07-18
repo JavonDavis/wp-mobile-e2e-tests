@@ -9,11 +9,12 @@ jobs:
       - image: circleci/android:api-28-alpha
     steps:
       - checkout
-      - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
       - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
-      -run: npm install -g appium
+      - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+      - run: npm install -g appium
 
       - run:
           name: install node dependencies
