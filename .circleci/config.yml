@@ -9,9 +9,12 @@ jobs:
       - image: circleci/android:api-28-alpha
     steps:
       - checkout
-      - run: mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+      - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
-      - run: brew install node
+      - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+      -run: npm install -g appium
+
       - run:
           name: install node dependencies
           command: |
