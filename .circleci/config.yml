@@ -18,6 +18,8 @@ jobs:
 
       - run: sudo apt-get install -y build-essential
 
+      - run: sudo chmod -R 777 /usr/lib/node_modules
+
       - run: sudo npm install -g appium
 
       - run:
