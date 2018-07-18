@@ -4,9 +4,6 @@
 #
 version: 2
 jobs:
-  machine:
-    node:
-      version: 8.11.3
   android:
     docker:
       - image: circleci/android:api-28-alpha
