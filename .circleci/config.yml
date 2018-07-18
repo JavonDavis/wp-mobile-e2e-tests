@@ -11,8 +11,9 @@ jobs:
       - checkout
 
       - run:
-        name: List available images
-        command: sdkmanager --list --verbose | grep system-images
+          name: List available images
+          command: |
+            sdkmanager --list --verbose | grep system-images
 
   ios:
 
