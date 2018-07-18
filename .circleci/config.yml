@@ -4,7 +4,14 @@
 #
 version: 2
 jobs:
-  build:
+  android:
+    docker:
+      - image: circleci/android:api-28-alpha
+    steps:
+      - checkout
+
+      - run: date
+  ios:
 
       # Specify the Xcode version to use
       macos:
