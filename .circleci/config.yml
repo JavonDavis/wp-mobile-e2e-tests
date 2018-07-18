@@ -11,10 +11,23 @@ jobs:
       - checkout
 
       - run:
+        name: install node dependencies
+        command: |
+          sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+
+      - run:
+          name: add linuxbrew to path
+          command: |
+            echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >> $BASH_ENV
+
+      - run:
           name: List available images
           command: |
             sdkmanager --list --verbose | grep system-images
-
+      - run:
+        name: Install Linuxbrew
+        command: |
+          ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - run:
           name: Setup emulator
           command: |
