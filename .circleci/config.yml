@@ -25,9 +25,10 @@ jobs:
           command: |
             sdkmanager --list --verbose | grep system-images
       - run:
-        name: Install Linuxbrew
-        command: |
-          ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+          name: Install Linuxbrew
+          command: |
+            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+
       - run:
           name: Setup emulator
           command: |
