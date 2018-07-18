@@ -18,7 +18,7 @@ jobs:
 
       - run: sudo apt-get install -y build-essential
 
-      - run: npm install -g appium
+      - run: sudo npm install -g appium
 
       - run:
           name: install node dependencies
