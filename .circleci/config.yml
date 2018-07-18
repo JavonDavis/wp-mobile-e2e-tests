@@ -12,7 +12,7 @@ jobs:
 
       - run: sudo apt-get update
 
-      - run: sudo apt-get install nodejs npm
+      - run: sudo apt-get install nodejs
 
       - run: npm install -g appium
 
