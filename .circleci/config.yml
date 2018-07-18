@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
 
-      - run: date
+      - run: adb devices -l
   ios:
 
       # Specify the Xcode version to use
