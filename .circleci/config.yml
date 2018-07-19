@@ -24,14 +24,15 @@ jobs:
           name: Install nodejs
           command: sudo apt-get update && sudo apt-get install -y nodejs
 
-      - run:
-          name: Install appium
-          command: |
-            npm install appium
-            cp -r node_modules/appium /usr/lib/node_modules
-            cp -r node_modules/.bin /usr/lib/node_modules
-            npm i npm
-            npm install -g appium
+      - run: npm install appium
+
+      - run: cp -r node_modules/appium /usr/lib/node_modules
+
+      - run: cp -r node_modules/.bin /usr/lib/node_modules
+
+      - run: npm i npm
+
+      - run: npm install -g appium
 
       - run:
           name: install qt package
