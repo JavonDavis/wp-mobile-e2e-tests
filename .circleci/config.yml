@@ -6,7 +6,7 @@ version: 2
 jobs:
   android:
     docker:
-      - image: wysiwyg/circleci-appium-android:v1
+      - image: circleci/android:api-28-alpha
 
     steps:
       - checkout
