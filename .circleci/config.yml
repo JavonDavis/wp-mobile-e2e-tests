@@ -12,6 +12,32 @@ jobs:
       - checkout
 
       - run:
+          name: Sudo User
+          command: sudo su
+          background: true
+
+      - run:
+          name: Get Repo for node
+          command: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+      - run:
+          name: Install nodejs
+          command: sudo apt-get update && sudo apt-get install -y nodejs
+
+      - run:
+          name: Install appium
+          command: |
+            npm install appium
+            cp -r node_modules/appium /usr/lib/node_modules
+            cp -r node_modules/.bin /usr/lib/node_modules
+            npm i npm
+            npm install -g appium
+
+      - run:
+          name: install qt package
+          command: sudo apt-get install libqt5widgets5
+
+      - run:
           name: Set Ruby Version
           command:  echo "ruby-2.4.1" > ~/.ruby-version
       - run:
