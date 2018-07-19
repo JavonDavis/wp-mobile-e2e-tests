@@ -6,7 +6,7 @@ version: 2
 jobs:
   android:
     docker:
-      - image: wysiwyg/circleci-appium-android:v2
+      - image: wysiwyg/circleci-appium-android:v1
 
     steps:
       - checkout
@@ -19,8 +19,12 @@ jobs:
           command: node -v
 
       - run:
-          name: Node Version
-          command: node -v
+          name: NPM Version
+          command: npm -v
+
+      - run:
+          name: Appium Version
+          command: appium -v
 
       - run:
           name: List available images
