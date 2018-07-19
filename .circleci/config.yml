@@ -18,9 +18,9 @@ jobs:
           name: Node Version
           command: node -v
 
-        - run:
-            name: Node Version
-            command: node -v
+      - run:
+          name: Node Version
+          command: node -v
 
       - run:
           name: List available images
