@@ -26,13 +26,13 @@ jobs:
 
       - run: npm install appium
 
-      - run: cp -r node_modules/appium /usr/lib/node_modules
+      - run: sudo cp -r node_modules/appium /usr/lib/node_modules
 
-      - run: cp -r node_modules/.bin /usr/lib/node_modules
+      - run: sudo cp -r node_modules/.bin /usr/lib/node_modules
 
-      - run: npm i npm
+      - run: sudo npm i npm
 
-      - run: npm install -g appium
+      - run: sudo npm install -g appium
 
       - run:
           name: install qt package
