@@ -81,11 +81,6 @@ jobs:
             bundle check --path=vendor/bundle || bundle install --retry=3 --path vendor
 
       - run:
-          name: Install appium
-          command: |
-            npm install -g appium
-
-      - run:
           name: Install allure
           command: |
             sudo apt-add-repository ppa:qameta/allure
