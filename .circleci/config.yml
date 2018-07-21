@@ -43,9 +43,15 @@ jobs:
             command: yes | sudo sdkmanager --licenses
             background: true
 
+
         - run:
             name: Wait on emulator
             command: sleep 10
+
+        - run:
+            name: Setup emulator
+            command: |
+              sdkmanager "system-images;android-25;google_apis;x86"
 
         - run: avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;x86"
 
