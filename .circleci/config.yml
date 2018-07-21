@@ -23,6 +23,8 @@ jobs:
 
         - run: echo 'export PATH=$(pwd)/tools/bin:$PATH' >> $BASH_ENV
 
+        - run: echo 'export ANDROID_HOME=$(pwd)/tools' >> $BASH_ENV
+
         - run: echo $PATH
 
         - run: mkdir ~/.android
