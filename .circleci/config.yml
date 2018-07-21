@@ -53,7 +53,7 @@ jobs:
             command: |
               sdkmanager "system-images;android-25;google_apis;x86"
 
-        - run: avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;x86"
+        - run: no | avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;x86"
 
         - run:
             name: Set Ruby Version
