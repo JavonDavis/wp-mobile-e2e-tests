@@ -25,7 +25,7 @@ jobs:
 
         - run: echo $PATH
 
-        - run: mkdir ~/./android
+        - run: mkdir ~/.android
 
         - run: touch ~/.android/repositories.cfg
         - run:
