@@ -15,7 +15,7 @@ jobs:
       steps:
         - checkout
 
-        - run:
+        - run: |
           curl -L -o ./sdk/sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
 
         - run: unzip ./sdk/sdk.zip
