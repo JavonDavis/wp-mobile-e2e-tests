@@ -5,7 +5,6 @@
 version: 2
 jobs:
   build:
-
       # Specify the Xcode version to use
       macos:
         xcode: "9.3.0"
@@ -16,7 +15,7 @@ jobs:
         - checkout
 
         - run: |
-          curl -L -o ./sdk/sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
+            curl -L -o ./sdk/sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
 
         - run: unzip ./sdk/sdk.zip
 
