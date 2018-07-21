@@ -64,7 +64,7 @@ jobs:
             sdkmanager "system-images;android-25;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;armeabi-v7a"
       - run:
           name: Launch emulator
-          command: export LD_LIBRARY_PATH=${ANDROID_HOME}/emulator/lib64:${ANDROID_HOME}/emulator/lib64/qt/lib && emulator64-arm -avd emulator-1 -noaudio -no-boot-anim -no-window -accel on
+          command: export LD_LIBRARY_PATH=${ANDROID_HOME}/emulator/lib64:${ANDROID_HOME}/emulator/lib64/qt/lib && emulator64-arm -avd emulator-1 -no-boot-anim -accel on
           background: true
 
       - run:
@@ -83,7 +83,7 @@ jobs:
       - run: mkdir ./output
 
       - run:
-          name: Download app file
+          name: Download apk file
           command: |
             curl -L -o ./apps/WordPress.apk "https://drive.google.com/uc?export=download&id=18ODObtGuG3UYhgst-6h6ucn79_kYTxwD"
 
