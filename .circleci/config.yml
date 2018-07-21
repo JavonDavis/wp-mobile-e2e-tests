@@ -14,6 +14,22 @@ jobs:
       steps:
         - checkout
 
+        - run:
+            name: Set Ruby Version
+            command:  echo "ruby-2.4.1" > ~/.ruby-version
+
+        - run:
+            name: adb pull
+            command:  echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+
+        - run:
+            name: adb
+            command:  brew cask install android-platform-tools
+
+        - run:
+            name: adb devices
+            command:  adb devices
+
         - run: |
             curl -L -o ./sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
 
@@ -56,10 +72,6 @@ jobs:
               sdkmanager "system-images;android-25;google_apis;x86"
 
         - run: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;x86"
-
-        - run:
-            name: Set Ruby Version
-            command:  echo "ruby-2.4.1" > ~/.ruby-version
 
         - run:
             name: Install Project Dependencies
