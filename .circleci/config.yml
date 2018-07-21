@@ -22,6 +22,12 @@ jobs:
             name: adb pull
             command:  echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
+        - run: brew cask install android-sdk
+
+        - run: echo 'export ANDROID_HOME=/usr/local/share/android-sdk'
+
+        - run: echo 'ls $ANDROID_HOME'
+
         - run:
             name: install adb
             command:  brew cask install android-platform-tools
