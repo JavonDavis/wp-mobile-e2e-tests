@@ -21,6 +21,10 @@ jobs:
 
         - run: export PATH=$(pwd)/tools:$PATH
 
+        - run: echo $PATH
+
+        - run: ./tools/android
+
         - run: android
 
         - run:
