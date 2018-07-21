@@ -36,7 +36,7 @@ jobs:
         - run:
             name: Setup emulator
             command: |
-              sdkmanager "system-images;android-28;google_apis_playstore;x86_64"
+              sdkmanager "system-images;android-25;google_apis;x86"
 
         - run:
             name: License
@@ -47,7 +47,7 @@ jobs:
             name: Wait on emulator
             command: sleep 10
 
-        - run: avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis_playstore;x86_64"
+        - run: avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;x86"
 
         - run:
             name: Set Ruby Version
