@@ -26,7 +26,9 @@ jobs:
 
         - run: echo 'export ANDROID_HOME=/usr/local/share/android-sdk'
 
-        - run: echo 'ls $ANDROID_HOME'
+        - run: ls $ANDROID_HOME
+
+        - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk'
 
         - run:
             name: install adb
