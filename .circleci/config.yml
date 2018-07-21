@@ -26,7 +26,7 @@ jobs:
 
         - run: echo 'export ANDROID_HOME=/usr/local/share/android-sdk'
 
-        - run: ls $ANDROID_HOME
+        - run: ls /usr/local/share/android-sdk
 
         - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk'
 
