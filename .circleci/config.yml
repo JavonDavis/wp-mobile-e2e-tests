@@ -38,8 +38,14 @@ jobs:
             command: |
               sdkmanager "system-images;android-28;google_apis_playstore;x86_64"
 
-        - run: yes | sudo sdkmanager --licenses
+        - run:
+            name: License
+            command: yes | sudo sdkmanager --licenses
+            background: true
 
+        - run:
+            name: Wait on emulator
+            command: sleep 10
 
         - run: avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis_playstore;x86_64"
 
