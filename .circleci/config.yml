@@ -15,9 +15,9 @@ jobs:
         - checkout
 
         - run: |
-            curl -L -o ./sdk/sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
+            curl -L -o ./sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
 
-        - run: unzip ./sdk/sdk.zip
+        - run: unzip ./sdk.zip
 
         - run: export PATH=$(pwd)/tools:$PATH
 
