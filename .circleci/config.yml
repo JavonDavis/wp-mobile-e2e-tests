@@ -33,7 +33,7 @@ jobs:
         - run:
             name: Setup emulator
             command: |
-              sdkmanager "system-images;android-25;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;armeabi-v7a"
+              sdkmanager "system-images;android-28;google_apis_playstore;x86_64" && echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis_playstore;x86_64"
 
         - run:
             name: Set Ruby Version
