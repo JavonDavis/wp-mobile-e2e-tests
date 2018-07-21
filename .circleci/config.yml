@@ -26,6 +26,11 @@ jobs:
         - run: echo $PATH
 
         - run:
+            name: List available images
+            command: |
+              sdkmanager --list --verbose
+
+        - run:
             name: Setup emulator
             command: |
               sdkmanager "system-images;android-25;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;armeabi-v7a"
