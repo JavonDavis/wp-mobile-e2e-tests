@@ -21,6 +21,8 @@ jobs:
 
         - run: echo 'export PATH=$(pwd)/tools:$PATH' >> $BASH_ENV
 
+        - run: echo 'export PATH=$(pwd)/tools/bin:$PATH' >> $BASH_ENV
+
         - run: echo $PATH
 
         - run:
