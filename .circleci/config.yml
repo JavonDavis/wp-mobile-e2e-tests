@@ -19,7 +19,7 @@ jobs:
 
         - run: unzip ./sdk.zip
 
-        - run: export PATH=$(pwd)/tools:$PATH
+        - run: echo 'export PATH=$(pwd)/tools' >> $BASH_ENV
 
         - run: echo $PATH
 
