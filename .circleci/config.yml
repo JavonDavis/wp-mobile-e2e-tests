@@ -4,99 +4,7 @@
 #
 version: 2
 jobs:
-  android:
-    docker:
-      - image: circleci/android:api-28-alpha
-
-    steps:
-      - checkout
-
-      - run:
-          name: Sudo User
-          command: sudo su
-          background: true
-
-      - run:
-          name: Get Repo for node
-          command: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-
-      - run:
-          name: Install nodejs
-          command: sudo apt-get update && sudo apt-get install -y nodejs
-
-      - run: npm install appium
-
-      - run: sudo cp -r node_modules/appium /usr/lib/node_modules
-
-      - run: sudo cp -r node_modules/.bin /usr/lib/node_modules
-
-      - run: sudo npm i npm
-
-      - run: sudo npm install -g appium
-
-      - run:
-          name: install qt package
-          command: sudo apt-get install libqt5widgets5
-
-      - run:
-          name: Set Ruby Version
-          command:  echo "ruby-2.4.1" > ~/.ruby-version
-      - run:
-          name: Node Version
-          command: node -v
-
-      - run:
-          name: NPM Version
-          command: npm -v
-
-      - run:
-          name: Appium Version
-          command: appium -v
-
-      - run:
-          name: List available images
-          command: |
-            sdkmanager --list --verbose | grep system-images
-
-      - run:
-          name: Setup emulator
-          command: |
-            sdkmanager "system-images;android-25;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;armeabi-v7a"
-      - run:
-          name: Launch emulator
-          command: export LD_LIBRARY_PATH=${ANDROID_HOME}/emulator/lib64:${ANDROID_HOME}/emulator/lib64/qt/lib && emulator64-arm -avd emulator-1 -noaudio -no-boot-anim -no-window -accel on
-          background: true
-
-      - run:
-          name: Wait on emulator
-          command: sleep 10
-
-      - run:
-          name: List running emulators
-          command: adb devices -l
-
-      - run:
-          name: Install Project Dependencies
-          command: |
-            bundle check --path=vendor/bundle || bundle install --retry=3 --path vendor
-
-      - run: mkdir ./output
-
-      - run:
-          name: Download apk file
-          command: |
-            curl -L -o ./apps/WordPress.apk "https://drive.google.com/uc?export=download&id=18ODObtGuG3UYhgst-6h6ucn79_kYTxwD"
-
-      # run tests!
-      - run:
-          name: run tests
-          command: |
-            platform=android bundle exec rake wordpress:test
-
-      - store_test_results:
-          path: ./output
-
-  ios:
+  ui_tests:
 
       # Specify the Xcode version to use
       macos:
@@ -106,6 +14,15 @@ jobs:
 
       steps:
         - checkout
+
+        - run:
+          curl -L -o ./sdk/sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
+
+        - run: unzip ./sdk/sdk.zip
+
+        - run: export PATH=$(pwd)/tools:$PATH
+
+        - run: android
 
         - run:
             name: Set Ruby Version
@@ -153,5 +70,4 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - android
-      - ios
+      - ui_tests
