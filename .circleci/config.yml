@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  ui_tests:
+  build:
 
       # Specify the Xcode version to use
       macos:
@@ -66,8 +66,3 @@ jobs:
         - store_artifacts:
             path: wordpress-report
             destination: wordpress
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - ui_tests
