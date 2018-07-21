@@ -85,7 +85,7 @@ jobs:
       - run:
           name: Download app file
           command: |
-            curl -L -o ./apps/WordPress.app.zip "https://drive.google.com/uc?export=download&id=18ODObtGuG3UYhgst-6h6ucn79_kYTxwD"
+            curl -L -o ./apps/WordPress.apk "https://drive.google.com/uc?export=download&id=18ODObtGuG3UYhgst-6h6ucn79_kYTxwD"
 
       # run tests!
       - run:
