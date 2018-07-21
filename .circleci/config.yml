@@ -19,11 +19,9 @@ jobs:
 
         - run: unzip ./sdk.zip
 
-        - run: echo 'export PATH=$(pwd)/tools' >> $BASH_ENV
+        - run: echo 'export PATH=$(pwd)/tools:$PATH' >> $BASH_ENV
 
         - run: echo $PATH
-
-        - run: ./tools/android
 
         - run: android
 
