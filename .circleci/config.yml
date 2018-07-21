@@ -38,7 +38,7 @@ jobs:
             command: |
               sdkmanager "system-images;android-28;google_apis_playstore;x86_64"
 
-        - run: sdkmanager --licenses
+        - run: sdkmanager --licenses && echo "y"
 
 
         - run: avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis_playstore;x86_64"
