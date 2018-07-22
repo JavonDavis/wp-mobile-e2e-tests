@@ -24,13 +24,11 @@ jobs:
 
         - run: brew cask install android-sdk
 
-        - run: echo 'export ANDROID_HOME=/usr/local/share/android-sdk'
+        - run: echo 'export ANDROID_HOME=/usr/local/share/android-sdk' >> $BASH_ENV
 
         - run: ls /usr/local/share/android-sdk
 
-        - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk'
-
-        - run:
+        - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' >> $BASH_ENV
 
         - run:
             name: install adb
@@ -48,8 +46,6 @@ jobs:
         - run: echo 'export PATH=$(pwd)/tools:$PATH' >> $BASH_ENV
 
         - run: echo 'export PATH=$(pwd)/tools/bin:$PATH' >> $BASH_ENV
-
-        - run: echo 'export ANDROID_SDK_ROOT=$(pwd)' >> $BASH_ENV
 
         - run: echo $PATH
 
