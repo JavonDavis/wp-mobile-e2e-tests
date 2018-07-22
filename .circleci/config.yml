@@ -48,10 +48,6 @@ jobs:
 
         - run: sudo cp -a /usr/local/Caskroom/android-platform-tools/28.0.0/platform-tools/. /usr/local/share/android-sdk/platform-tools/
 
-        - run:
-            name: adb devices test
-            command:  adb devices
-
         - run: echo 'export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH' >> $BASH_ENV
 
         - run: echo 'export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH' >> $BASH_ENV
@@ -93,6 +89,15 @@ jobs:
         - run: ls /usr/local/share/android-sdk
 
         - run: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis;x86"
+
+        - run:
+            name: Start emulator
+            command: emulator -avd emulator-1
+            background: true
+
+        - run:
+            name: adb devices test
+            command:  adb devices
 
         - run:
             name: Install Project Dependencies
