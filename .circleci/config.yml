@@ -5,7 +5,6 @@
 version: 2
 jobs:
   build:
-
       # Specify the Xcode version to use
       macos:
         xcode: "9.3.0"
@@ -18,6 +17,95 @@ jobs:
         - run:
             name: Set Ruby Version
             command:  echo "ruby-2.4.1" > ~/.ruby-version
+
+        - run:
+            name: Pull Cask repository
+            command:  echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+
+        - run:
+            name: Install Android SDK
+            command: |
+              brew cask install android-sdk
+              echo 'export ANDROID_HOME=/usr/local/share/android-sdk' >> $BASH_ENV
+              echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' >> $BASH_ENV
+
+        - run:
+            name: emulator link
+            command: |
+              cd /usr/local/share/android-sdk/tools
+              ln -s emulator64-x86 emulator-x86
+
+        - run:
+            name: Create Platfoms directory
+            command: mkdir /usr/local/share/android-sdk/platforms
+
+        - run:
+            name: Install Platform tools
+            command:  brew cask install android-platform-tools
+
+        - run:
+            name: Duplicate platform tools to sdk location
+            command: |
+              sudo mkdir /usr/local/share/android-sdk/platform-tools/
+              sudo cp -a /usr/local/Caskroom/android-platform-tools/28.0.0/platform-tools/. /usr/local/share/android-sdk/platform-tools/
+
+        - run:
+            name: Setup PATH environmant variable with Android Dependencies
+            command: |
+              echo 'export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_SDK_ROOT/tools:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_HOME/emulator:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_HOME/build-tools:$PATH' >> $BASH_ENV
+
+        - run:
+            name: List available images
+            command: |
+              sdkmanager --list --verbose
+
+        - run:
+            name: Install Emulator image - Pre License
+            command: |
+              sdkmanager "system-images;android-28;google_apis;x86"
+
+        - run:
+            name: Accept all Licenses
+            command: yes | sudo sdkmanager --licenses
+            background: true
+
+        - run:
+            name: Wait for some time
+            command: sleep 10
+
+        - run:
+            name: Install Emulator image - Post License
+            command: |
+              sdkmanager "system-images;android-28;google_apis;x86"
+
+        - run:
+            name: Install Build tools 28(Based on system image chosen)
+            command: sdkmanager --install "build-tools;28.0.1"
+
+        - run:
+            name: Update SDK Manager
+            command: sdkmanager --update
+
+        - run:
+            name: Create Emulator instance
+            command: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis;x86"
+
+        - run:
+            name: Start headless emulator
+            command: emulator -avd emulator-1 -no-skin -no-audio -no-window
+            background: true
+
+        - run:
+            name: Wait on emulator
+            command: sleep 15
+
+        - run:
+            name:  List connected Android devices
+            command:  adb devices -l
 
         - run:
             name: Install Project Dependencies
@@ -35,6 +123,11 @@ jobs:
               brew install allure
 
         - run:
+            name: Download apk file
+            command: |
+              curl -L -o ./apps/WordPress.apk "https://drive.google.com/uc?export=download&id=1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3"
+
+        - run:
             name: Download app file
             command: |
               curl -L -o ./apps/WordPress.app.zip "https://drive.google.com/uc?export=download&id=18ODObtGuG3UYhgst-6h6ucn79_kYTxwD"
@@ -49,7 +142,7 @@ jobs:
         - run:
             name: run tests
             command: |
-              platform=ios bundle exec rake wordpress:test
+              platform=all bundle exec rake wordpress:test
 
         - store_test_results:
             path: ./output
@@ -57,4 +150,3 @@ jobs:
         - store_artifacts:
             path: wordpress-report
             destination: wordpress
-

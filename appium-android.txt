@@ -1,10 +1,10 @@
 [caps]
 platformName = "android"
 deviceName = "Android Emulator"
-platformVersion = "8.1.0"
 app = "./apps/WordPress.apk"
 appActivity = "org.wordpress.android.ui.WPLaunchActivity"
 appPackage = "org.wordpress.android"
+avd = "emulator-1"
 
 [appium_lib]
 wait = 2
