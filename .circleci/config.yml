@@ -43,9 +43,9 @@ jobs:
 
         - run: unzip ./sdk.zip
 
-        - run: echo 'export PATH=$ANDROID_SDK_ROOT/tools:$PATH' >> $BASH_ENV
+        - run: echo 'export PATH=$(ANDROID_SDK_ROOT)/tools:$PATH' >> $BASH_ENV
 
-        - run: echo 'export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH' >> $BASH_ENV
+        - run: echo 'export PATH=$(ANDROID_SDK_ROOT)/tools/bin:$PATH' >> $BASH_ENV
 
         - run: echo $PATH
 
