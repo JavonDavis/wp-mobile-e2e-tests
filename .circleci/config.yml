@@ -30,6 +30,8 @@ jobs:
 
         - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' >> $BASH_ENV
 
+        - run: mkdir /usr/local/share/android-sdk/platforms
+
         - run:
             name: install adb
             command:  brew cask install android-platform-tools
@@ -56,7 +58,7 @@ jobs:
         - run:
             name: Setup emulator
             command: |
-              sdkmanager "system-images;android-25;google_apis;x86"
+              sdkmanager "system-images;android-28;google_apis;x86"
 
         - run:
             name: License
@@ -70,11 +72,11 @@ jobs:
         - run:
             name: Setup emulator
             command: |
-              sdkmanager "system-images;android-25;google_apis;x86"
+              sdkmanager "system-images;android-28;google_apis;x86"
 
         - run: ls /usr/local/share/android-sdk
 
-        - run: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-25;google_apis;x86"
+        - run: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis;x86"
 
         - run:
             name: Install Project Dependencies
