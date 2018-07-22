@@ -88,6 +88,8 @@ jobs:
 
         - run: ls /usr/local/share/android-sdk
 
+        - run: sdkmanager --update
+
         - run: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis;x86"
 
         - run:
