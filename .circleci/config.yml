@@ -31,6 +31,8 @@ jobs:
         - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk'
 
         - run:
+
+        - run:
             name: install adb
             command:  brew cask install android-platform-tools
 
@@ -46,6 +48,8 @@ jobs:
         - run: echo 'export PATH=$(pwd)/tools:$PATH' >> $BASH_ENV
 
         - run: echo 'export PATH=$(pwd)/tools/bin:$PATH' >> $BASH_ENV
+
+        - run: echo 'export ANDROID_SDK_ROOT=$(pwd)' >> $BASH_ENV
 
         - run: echo $PATH
 
