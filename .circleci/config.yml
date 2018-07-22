@@ -92,8 +92,12 @@ jobs:
 
         - run:
             name: Start emulator
-            command: emulator -avd emulator-1
+            command: emulator -avd emulator-1 -no-skin -no-audio -no-window
             background: true
+
+        - run:
+            name: Wait on emulator
+            command: sleep 10
 
         - run:
             name: adb devices test
