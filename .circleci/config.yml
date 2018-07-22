@@ -140,7 +140,7 @@ jobs:
         - run:
             name: run tests
             command: |
-              platform=all bundle exec rake wordpress:test
+              platform=android bundle exec rake wordpress:test
 
         - store_test_results:
             path: ./output
