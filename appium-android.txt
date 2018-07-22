@@ -4,7 +4,7 @@ deviceName = "Android Emulator"
 app = "./apps/WordPress.apk"
 appActivity = "org.wordpress.android.ui.WPLaunchActivity"
 appPackage = "org.wordpress.android"
-automationName = "UIAutomator2"
+avd = "emulator-1"
 
 [appium_lib]
 wait = 2

@@ -19,16 +19,15 @@ jobs:
             command:  echo "ruby-2.4.1" > ~/.ruby-version
 
         - run:
-            name: adb pull
+            name: Pull Cask repository
             command:  echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
-        - run: brew cask install android-sdk
-
-        - run: echo 'export ANDROID_HOME=/usr/local/share/android-sdk' >> $BASH_ENV
-
-        - run: ls /usr/local/share/android-sdk
-
-        - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' >> $BASH_ENV
+        - run:
+            name: Install Android SDK
+            command: |
+              brew cask install android-sdk
+              echo 'export ANDROID_HOME=/usr/local/share/android-sdk' >> $BASH_ENV
+              echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' >> $BASH_ENV
 
         - run:
             name: emulator link
@@ -36,29 +35,28 @@ jobs:
               cd /usr/local/share/android-sdk/tools
               ln -s emulator64-x86 emulator-x86
 
-        - run: mkdir /usr/local/share/android-sdk/platforms
+        - run:
+            name: Create Platfoms directory
+            command: mkdir /usr/local/share/android-sdk/platforms
 
         - run:
-            name: install adb
+            name: Install Platform tools
             command:  brew cask install android-platform-tools
 
-        - run: brew cask info android-platform-tools
+        - run:
+            name: Duplicate platform tools to sdk location
+            command: |
+              sudo mkdir /usr/local/share/android-sdk/platform-tools/
+              sudo cp -a /usr/local/Caskroom/android-platform-tools/28.0.0/platform-tools/. /usr/local/share/android-sdk/platform-tools/
 
-        - run: sudo mkdir /usr/local/share/android-sdk/platform-tools/
-
-        - run: sudo cp -a /usr/local/Caskroom/android-platform-tools/28.0.0/platform-tools/. /usr/local/share/android-sdk/platform-tools/
-
-        - run: echo 'export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH' >> $BASH_ENV
-
-        - run: echo 'export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH' >> $BASH_ENV
-
-        - run: echo 'export PATH=$ANDROID_SDK_ROOT/tools:$PATH' >> $BASH_ENV
-
-        - run: echo 'export PATH=$ANDROID_HOME/emulator:$PATH' >> $BASH_ENV
-
-        - run: echo 'export PATH=$ANDROID_HOME/build-tools:$PATH' >> $BASH_ENV
-
-        - run: echo $PATH
+        - run:
+            name: Setup PATH environmant variable with Android Dependencies
+            command: |
+              echo 'export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_SDK_ROOT/tools:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_HOME/emulator:$PATH' >> $BASH_ENV
+              echo 'export PATH=$ANDROID_HOME/build-tools:$PATH' >> $BASH_ENV
 
         - run:
             name: List available images
@@ -66,44 +64,48 @@ jobs:
               sdkmanager --list --verbose
 
         - run:
-            name: Setup emulator
+            name: Install Emulator image - Pre License
             command: |
               sdkmanager "system-images;android-28;google_apis;x86"
 
         - run:
-            name: License
+            name: Accept all Licenses
             command: yes | sudo sdkmanager --licenses
             background: true
 
         - run:
-            name: Wait on emulator
+            name: Wait for some time
             command: sleep 10
 
         - run:
-            name: Setup emulator
+            name: Install Emulator image - Post License
             command: |
               sdkmanager "system-images;android-28;google_apis;x86"
 
-        - run: sdkmanager --install "build-tools;28.0.1"
-
-        - run: ls /usr/local/share/android-sdk
-
-        - run: sdkmanager --update
-
-        - run: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis;x86"
+        - run:
+            name: Install Build tools 28(Based on system image chosen)
+            command: sdkmanager --install "build-too
 
         - run:
-            name: Start emulator
+            name: Update SDK Manager
+            command: sdkmanager --update
+
+        - run:
+            name: Create Emulator instance
+            command: echo "no" | avdmanager create avd -n emulator-1 -k "system-images;android-28;google_apis;x86"
+
+        - run:
+            name: Start headless emulator
             command: emulator -avd emulator-1 -no-skin -no-audio -no-window
             background: true
 
         - run:
             name: Wait on emulator
-            command: sleep 10
+            command: sleep 15
 
         - run:
-            name: adb devices test
-            command:  adb devices
+            name:  List connected Android devices
+            command:  adb devices -l
 
         - run:
             name: Install Project Dependencies
