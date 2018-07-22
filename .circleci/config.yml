@@ -38,11 +38,6 @@ jobs:
             name: adb devices test
             command:  adb devices
 
-        - run: |
-            curl -L -o ./sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
-
-        - run: unzip ./sdk.zip
-
         - run: echo 'export PATH=$ANDROID_SDK_ROOT/tools:$PATH' >> $BASH_ENV
 
         - run: echo 'export PATH=$(ANDROID_SDK_ROOT)/tools/bin:$PATH' >> $BASH_ENV
