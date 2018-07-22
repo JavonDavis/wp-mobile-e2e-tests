@@ -30,6 +30,10 @@ jobs:
 
         - run: echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' >> $BASH_ENV
 
+        - run: |
+          cd /usr/local/share/android-sdk
+          ln -s emulator64-x86 emulator-x86
+
         - run: mkdir /usr/local/share/android-sdk/platforms
 
         - run:
