@@ -34,7 +34,7 @@ jobs:
             name: install adb
             command:  brew cask install android-platform-tools
 
-        - run: brew info android-platform-tools
+        - run: brew cask info android-platform-tools
 
         - run:
             name: adb devices test
