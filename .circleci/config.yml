@@ -47,7 +47,7 @@ jobs:
 
         - run: echo 'export PATH=$(ANDROID_SDK_ROOT)/tools/bin:$PATH' >> $BASH_ENV
 
-        - run: $ANDROID_HOME/emulator
+        - run: $ANDROID_HOME/tools/emulator
 
         - run: echo $PATH
 
