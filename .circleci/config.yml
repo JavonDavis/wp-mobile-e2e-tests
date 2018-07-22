@@ -84,7 +84,7 @@ jobs:
 
         - run:
             name: Install Build tools 28(Based on system image chosen)
-            command: sdkmanager --install "build-too
+            command: sdkmanager --install "build-tools"
 
         - run:
             name: Update SDK Manager
