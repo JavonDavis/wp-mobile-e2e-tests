@@ -31,7 +31,7 @@ class LoginPage < BasePage
 
   def attempt_login
     wait_then_click @locators[:log_in_button]
-    return (!explicitly_wait_for_presence @locators[:error_label]) || (explicitly_wait_for_presence @locators[:password_field])
+    (!explicitly_wait_for_presence @locators[:error_label]) || (explicitly_wait_for_presence @locators[:password_field])
   end
 
 end
