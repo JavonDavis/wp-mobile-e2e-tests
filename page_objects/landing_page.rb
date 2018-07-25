@@ -18,7 +18,7 @@ class LandingPage < BasePage
 
   # @return [String] the text contained in the promo label, nil otherwise
   def promo_label_text
-    nil unless is_on_landing_page
+    nil unless on_landing_page?
     nil unless explicitly_wait_for_presence @locators[:promo_label]
 
     if @platform == :android
@@ -40,5 +40,17 @@ class LandingPage < BasePage
     false unless explicitly_wait_for_presence @locators[:promo_label]
     promo_label_element = @driver.find_element @locators[:promo_label]
     swipe promo_label_element, direction
+  end
+
+  def click_login_button
+    wait_then_click @locators[:login_button]
+  end
+
+  def click_sign_up_button
+    wait_then_click @locators[:signup_button]
+  end
+
+  def click_sign_up_via_email_button
+    wait_then_click @locators[:signup_email_button]
   end
 end

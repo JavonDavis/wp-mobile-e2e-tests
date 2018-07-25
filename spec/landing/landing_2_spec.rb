@@ -1,12 +1,13 @@
 require_relative '../../page_objects/landing_page'
 require_relative '../../page_objects/login_page'
+require_relative '../../page_objects/signup_page'
 require_relative '../../common/common'
 
 ParallelAppium::Server.new.set_udid_environment_variable
 
-describe "#{ENV['platform']}: Landing Page" do
+describe "#{ENV['platform']}: Landing Page Group #2" do
 
-  before(:all) do
+  before(:each) do
     @platform = caps[:platformName].to_sym
     @driver = start_driver
     @landing_page = LandingPage.new @driver, @platform

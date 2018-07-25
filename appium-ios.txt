@@ -5,6 +5,7 @@ platformVersion = "11.4"
 app = "./apps/WordPress.app.zip"
 automationName = "XCUITest"
 bundleId = "org.wordpress"
+noReset = false
 
 [appium_lib]
 wait = 2

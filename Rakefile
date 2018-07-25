@@ -2,6 +2,9 @@
 require 'bundler/setup'
 require 'rake/testtask'
 require 'parallel_appium'
+require 'dotenv'
+
+Dotenv.load
 
 namespace :wordpress do
   desc 'Run tests'

@@ -1,15 +1,21 @@
+
+# Locators for the Help page
 class HelpPageLocators
 
   android_locators = {
-    title_label: {id: 'org.wordpress.android:id/create_account_label'},
+    title_label: { id: 'org.wordpress.android:id/create_account_label' },
   }
 
   ios_locators = {
-    title_label: {accessibility_id: 'WordPress Help Center'}
+    title_label: { accessibility_id: 'WordPress Help Center' }
   }
 
-  locators = {
-      android: android_locators,
-      ios: ios_locators
-  }
+  LOCATORS = {
+    android: android_locators,
+    ios: ios_locators
+  }.freeze
+
+  def locators(platform)
+    LOCATORS[platform]
+  end
 end

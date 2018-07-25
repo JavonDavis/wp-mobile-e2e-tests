@@ -4,14 +4,13 @@ require_relative '../../common/common'
 
 ParallelAppium::Server.new.set_udid_environment_variable
 
-describe "#{ENV['platform']}: Login Page" do
+describe "#{ENV['platform']}: Login Page Group #1" do
 
-  before(:all) do
+  before(:each) do
     @platform = caps[:platformName].to_sym
     @driver = start_driver
     @landing_page = LandingPage.new @driver, @platform
     @login_page = LoginPage.new @driver, @platform
-
   end
 
   it 'should allow users to login with valid email and password', ios: true, android: true do |t|
@@ -35,7 +34,9 @@ describe "#{ENV['platform']}: Login Page" do
     password = password.to_s
 
     t.step "Attempt to login with #{email} and password: #{password}" do
-      login_result = @login_page.attempt_login(email, password)
+      @login_page.enter_email email
+      @login_page.enter_password password
+      login_result = @login_page.attempt_login
       expect(login_result).to be true
     end
   end
@@ -58,12 +59,14 @@ describe "#{ENV['platform']}: Login Page" do
       expect(password).to_not be nil
     end
 
-    # let's assume this user does not exist
-    email = 'abc@abc.com'
+    # let's assume this user's password is not password.
+    email = 'test@tester.com'
     password = 'password'
 
     t.step "Attempt to login with #{email} and password: #{password}" do
-      login_result = @login_page.attempt_login(email, password)
+      @login_page.enter_email email
+      @login_page.enter_password password
+      login_result = @login_page.attempt_login
       expect(login_result).to be false
     end
 
