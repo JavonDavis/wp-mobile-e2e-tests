@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/JavonDavis/parallel_appium.git
-  revision: d5cce00fc14eefb6921971e6e177e39027fcafac
-  branch: feature/avd_data_capture
-  specs:
-    parallel_appium (0.2.5)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -37,6 +30,7 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
+    parallel_appium (0.2.5)
     parallel_tests (2.22.0)
       parallel
     rake (12.3.1)
@@ -73,7 +67,7 @@ PLATFORMS
 DEPENDENCIES
   allure-rspec
   appium_lib
-  parallel_appium!
+  parallel_appium
   parallel_tests
   rake
   rspec

@@ -109,3 +109,4 @@ output/
 /wordpress-report/
 .DS_STORE
 node_configs
+/.env

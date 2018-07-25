@@ -1,0 +1,2 @@
+class SignupPage
+end

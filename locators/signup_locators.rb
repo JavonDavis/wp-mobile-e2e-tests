@@ -1,0 +1,2 @@
+class SignupLocators
+end
