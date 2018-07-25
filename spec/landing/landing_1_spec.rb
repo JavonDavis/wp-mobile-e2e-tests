@@ -3,18 +3,18 @@ require_relative '../../common/common'
 
 ParallelAppium::Server.new.set_udid_environment_variable
 
-describe "#{ENV['platform']}: Landing Page" do
+describe "#{ENV['platform']}: Landing Page Group #1" do
 
-  before(:all) do
+  before(:each) do
     @platform = caps[:platformName].to_sym
     @driver = start_driver
-    @landing_page = LandingPage.new driver, @platform
+    @landing_page = LandingPage.new @driver, @platform
   end
 
   it 'should successfully load landing page', ios: true, android: true do |t|
 
     t.step 'Check that landing page loaded' do
-      expect(@landing_page.is_on_landing_page).to equal true
+      expect(@landing_page.on_landing_page?).to equal true
     end
     helper.take_screenshot @driver
   end
@@ -31,7 +31,7 @@ describe "#{ENV['platform']}: Landing Page" do
   # ios 'Manage your Jetpack-powered site on the go — you‘ve got WordPress in your pocket.'
   it 'should successfully load all promotion cards', ios: true, android:true do |t|
     t.step 'Check that landing page loaded' do
-      expect(@landing_page.is_on_landing_page).to equal true
+      expect(@landing_page.on_landing_page?).to equal true
     end
     helper.take_screenshot @driver
 
@@ -65,7 +65,7 @@ describe "#{ENV['platform']}: Landing Page" do
       end
 
       t.step "Swipe card ##{i}" do
-        expect(@landing_page.swipe_promo_label :right).to equal true
+        expect(@landing_page.swipe_promo_label(:right)).to equal true
       end
       i -= 1
     end

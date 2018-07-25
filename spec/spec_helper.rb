@@ -29,6 +29,7 @@ RSpec.configure do |config|
     helper.stop_video_record ENV['UDID']
     attach_report_files @driver, e
     helper.clean_output_folder
+
   end
 
   config.after :all do
