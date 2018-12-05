@@ -67,6 +67,10 @@ Once you've got your apk and .app.zip file you'll need to move them into the .ap
 
 Next you'll need to install the dependencies to run the app. That's a pretty simple step
 
+## Install bundler
+
+```gem install bundler```
+
 ## Install dependencies
 
 ```bundle install --path vendor``` boom and the dependencies will be installed!
