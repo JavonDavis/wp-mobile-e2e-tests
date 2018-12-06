@@ -1,6 +1,7 @@
 require 'rspec'
 require 'allure-rspec'
 require 'parallel_appium'
+require 'config'
 
 require_relative '../common/common'
 require_relative '../common/allure_common'
@@ -11,6 +12,9 @@ RSpec.configure do |config|
   config.include AllureRSpec::Adaptor
 
   config.before :all do
+
+    Config.load_and_set_settings(Config.setting_files("#{ENV['BASE_DIR']}/config", "example"))
+
     puts "Initializing Appium for #{ENV['platform']}"
     @driver = ParallelAppium::ParallelAppium.new.initialize_appium platform: ENV['platform']
   end

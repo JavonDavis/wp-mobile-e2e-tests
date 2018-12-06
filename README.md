@@ -113,6 +113,10 @@ platform=ios bundle exec rake wordpress:test[relative/path/to/spec]
 
 ## Viewing report locally
 
+## Install allure
+
+Instructions for installing Allure can be found [here](https://docs.qameta.io/allure/).
+
 Reports are generated with allure and the data for the report is stored in the output folder after the tests are finished,
 this includes any screenshots along with the test results and meta data. It's then compiled and stored in 
 a wordpress-report folder in the project, you can open the report via Allure or you can simply execute,

@@ -1,0 +1,6 @@
+# Default file for loading information
+testAccounts:
+  defaultUser:
+    - "email"
+    - "password"
+    - "site"
