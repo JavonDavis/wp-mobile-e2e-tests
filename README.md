@@ -17,11 +17,12 @@ to distribute tests across devices and execute tests in parallel.
 ## What does this project do
 
 * Run UI tests on the Wordpress mobile apps
-* Demonstrate a project structure for testing with Appium, RSpec and Selenium
+* Demonstrate a project structure for running automated e2e tests with Appium, RSpec and Selenium
 * Demonstrate the use of the [parallel_appium gem](https://github.com/JavonDavis/parallel_appium) for running rspec appium 
 tests in a single or multi-threaded environment across platforms
 * Demonstrate setting up a continuous integration flow with CircleCi, Appium and Rspec for Mobile testing
-* Demonstrate techniques for locating and interacting with elements through Appium
+* Demonstrate the use of Allure for generating reports of test runs
+* Demonstrate techniques for locating and interacting with mobile app elements through Appium
 
 ## View Report 
 
@@ -32,9 +33,7 @@ report for one of the builds to give you an idea of what's provided.
 
 ## Getting setup
 
-First let's get the apps we'll be automating. 
-The app we'll be automating is the Wordpress mobile app which is open source and free to use and is a pretty great app
- overall and beat all the other options I think for a demo app, kudos to the team over at Wordpress. The builds tested with this project I've made publicly available to download below,
+The app builds tested with this project I've made publicly available to download below,
 
 * [Android](https://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing)
 * [iOS](https://drive.google.com/file/d/18ODObtGuG3UYhgst-6h6ucn79_kYTxwD/view?usp=sharing)
@@ -66,6 +65,10 @@ Once you've got your apk and .app.zip file you'll need to move them into the .ap
  files to point to their correct location. For CI setup I would recommend the apps folder to keep things simple.
 
 Next you'll need to install the dependencies to run the app. That's a pretty simple step
+
+## System dependencies
+
+* Xcode command line tools should be installed
 
 ## Install bundler
 
@@ -101,7 +104,7 @@ platform=ios bundle exec rake wordpress:test
 
 ### Running all android tests
 
-platform=ios bundle exec rake wordpress:test
+platform=android bundle exec rake wordpress:test
 
 ### Running all tests on both platforms simultaneously
 
