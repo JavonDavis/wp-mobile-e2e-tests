@@ -115,7 +115,7 @@ jobs:
         - run:
             name: Install appium
             command: |
-              npm install -g appium
+              npm install -g appium@1.9.1
 
         - run:
             name: Install allure
