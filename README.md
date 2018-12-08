@@ -44,50 +44,44 @@ for Android and iOS.
 
 ## [Building android app](https://github.com/wordpress-mobile/WordPress-Android) 
 
-Executing the following command will build an unsigned version of the Android app that can be used, 
-
-```./gradlew assembleVanillaDebug```
-
-This will generate an apk that can be used for testing.
+If you'd like to use your own version follow the instructions [here](https://github.com/wordpress-mobile/WordPress-Android) 
+and generate an apk file. 
 
 
 ## [Building iOS app](https://github.com/wordpress-mobile/WordPress-iOS) 
 
-From the project root you'll need to execute the following command with the correct sdk based on the XCode version on your machine, currently mine is 9.4,
-
-```xcodebuild -workspace WordPress.xcworkspace -scheme WordPress -configuration “Debug” -sdk iphonesimulator11.4```
-
-This command will build a .app file that can be used for testing on an iPhone simulator, you'll need to compress this file into a
-.app.zip file or you can use the .app file if you'd like just remember to update the path in the appium-ios.txt file.
+If you'd like to use your own version follow the instructions [here](https://github.com/wordpress-mobile/WordPress-iOS) 
+and generate an .app file, compress it to .app.zip file.
 
 
-Once you've got your apk and .app.zip file you'll need to move them into the .apps folder or update the appium text
- files to point to their correct location. For CI setup I would recommend the apps folder to keep things simple.
-
-Next you'll need to install the dependencies to run the app. That's a pretty simple step
+Once you've got your apk and .app.zip file you'll need to move them into the ./apps folder or update the appium text in the root folder of the project
+ files to point to their correct location. For CI purposes I would recommend the apps folder to keep things simple.
 
 ## System dependencies
 
 * Xcode command line tools should be installed
+* Ruby should be installed, preferably using the version in the .ruby-version file
 
 ## Install bundler
 
 ```gem install bundler```
 
-## Install dependencies
+## Install project dependencies
 
-```bundle install --path vendor``` boom and the dependencies will be installed!
+After installing bundler run ```bundle install --path vendor``` to install the dependencies. 
 
 ## Parallel Appium depenency
 
-The [parallel_appium gem](https://github.com/JavonDavis/parallel_appium) covers a lot of bases including starting 
-the appium server, selenium server and setting up and coordinating environment variables. **For this project to work well
-ensure you've followed the instructions in that repository for setting up the gem.**
+One of the things about this project is that it handles firing up the appium and selenium grid server, connecting to emulator/simulator, coordinating environment variables and executing tests in parallel.
+All of this code is bundled into the [parallel_appium gem](https://github.com/JavonDavis/parallel_appium) **For this project to work well
+ensure you've followed the instructions in that repository for setting up the gem.** These requirements basically ensure appium and all the 
+required commands are available.
 
 ## Appium text files
 
 Appium text files are provided in the repository as per the requirement of the [parallel_appium gem](https://github.com/JavonDavis/parallel_appium)
-but when running this locally please remember to adjust these to match out with your machine. 
+but when running this locally please remember to adjust these to match out with the paths you might be using on your machine. These 
+files are used to specify the desired capabilities for appium. 
 
 
 ## Running the Project
@@ -137,4 +131,3 @@ problems or improvements you'd like to make.
 This software is provided "as is" and without any express or implied warranties, including, without limitation, 
 the implied warranties of merchantibility and fitness for a particular purpose.
 
-Hope this gem makes someone's life easier!
