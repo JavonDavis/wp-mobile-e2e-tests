@@ -47,7 +47,7 @@ jobs:
             name: Duplicate platform tools to sdk location
             command: |
               sudo mkdir /usr/local/share/android-sdk/platform-tools/
-              sudo cp -a /usr/local/Caskroom/android-platform-tools/28.0.0/platform-tools/. /usr/local/share/android-sdk/platform-tools/
+              sudo cp -a /usr/local/Caskroom/android-platform-tools/28.0.1/platform-tools/. /usr/local/share/android-sdk/platform-tools/
 
         - run:
             name: Setup PATH environmant variable with Android Dependencies
