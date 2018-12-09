@@ -17,11 +17,12 @@ to distribute tests across devices and execute tests in parallel.
 ## What does this project do
 
 * Run UI tests on the Wordpress mobile apps
-* Demonstrate a project structure for testing with Appium, RSpec and Selenium
+* Demonstrate a project structure for running automated e2e tests with Appium, RSpec and Selenium
 * Demonstrate the use of the [parallel_appium gem](https://github.com/JavonDavis/parallel_appium) for running rspec appium 
 tests in a single or multi-threaded environment across platforms
 * Demonstrate setting up a continuous integration flow with CircleCi, Appium and Rspec for Mobile testing
-* Demonstrate techniques for locating and interacting with elements through Appium
+* Demonstrate the use of Allure for generating reports of test runs
+* Demonstrate techniques for locating and interacting with mobile app elements through Appium
 
 ## View Report 
 
@@ -32,9 +33,7 @@ report for one of the builds to give you an idea of what's provided.
 
 ## Getting setup
 
-First let's get the apps we'll be automating. 
-The app we'll be automating is the Wordpress mobile app which is open source and free to use and is a pretty great app
- overall and beat all the other options I think for a demo app, kudos to the team over at Wordpress. The builds tested with this project I've made publicly available to download below,
+The app builds tested with this project I've made publicly available to download below,
 
 * [Android](https://drive.google.com/file/d/1Hb2z7guNc8ch1o11mmuP5aioJ_Endal3/view?usp=sharing)
 * [iOS](https://drive.google.com/file/d/18ODObtGuG3UYhgst-6h6ucn79_kYTxwD/view?usp=sharing)
@@ -45,42 +44,44 @@ for Android and iOS.
 
 ## [Building android app](https://github.com/wordpress-mobile/WordPress-Android) 
 
-Executing the following command will build an unsigned version of the Android app that can be used, 
-
-```./gradlew assembleVanillaDebug```
-
-This will generate an apk that can be used for testing.
+If you'd like to use your own version follow the instructions [here](https://github.com/wordpress-mobile/WordPress-Android) 
+and generate an apk file. 
 
 
 ## [Building iOS app](https://github.com/wordpress-mobile/WordPress-iOS) 
 
-From the project root you'll need to execute the following command with the correct sdk based on the XCode version on your machine, currently mine is 9.4,
-
-```xcodebuild -workspace WordPress.xcworkspace -scheme WordPress -configuration “Debug” -sdk iphonesimulator11.4```
-
-This command will build a .app file that can be used for testing on an iPhone simulator, you'll need to compress this file into a
-.app.zip file or you can use the .app file if you'd like just remember to update the path in the appium-ios.txt file.
+If you'd like to use your own version follow the instructions [here](https://github.com/wordpress-mobile/WordPress-iOS) 
+and generate an .app file, compress it to .app.zip file.
 
 
-Once you've got your apk and .app.zip file you'll need to move them into the .apps folder or update the appium text
- files to point to their correct location. For CI setup I would recommend the apps folder to keep things simple.
+Once you've got your apk and .app.zip file you'll need to move them into the ./apps folder or update the appium text in the root folder of the project
+ files to point to their correct location. For CI purposes I would recommend the apps folder to keep things simple.
 
-Next you'll need to install the dependencies to run the app. That's a pretty simple step
+## System dependencies
 
-## Install dependencies
+* Xcode command line tools should be installed
+* Ruby should be installed, preferably using the version in the .ruby-version file
 
-```bundle install --path vendor``` boom and the dependencies will be installed!
+## Install bundler
+
+```gem install bundler```
+
+## Install project dependencies
+
+After installing bundler run ```bundle install --path vendor``` to install the dependencies. 
 
 ## Parallel Appium depenency
 
-The [parallel_appium gem](https://github.com/JavonDavis/parallel_appium) covers a lot of bases including starting 
-the appium server, selenium server and setting up and coordinating environment variables. **For this project to work well
-ensure you've followed the instructions in that repository for setting up the gem.**
+One of the things about this project is that it handles firing up the appium and selenium grid server, connecting to emulator/simulator, coordinating environment variables and executing tests in parallel.
+All of this code is bundled into the [parallel_appium gem](https://github.com/JavonDavis/parallel_appium) **For this project to work well
+ensure you've followed the instructions in that repository for setting up the gem.** These requirements basically ensure appium and all the 
+required commands are available.
 
 ## Appium text files
 
 Appium text files are provided in the repository as per the requirement of the [parallel_appium gem](https://github.com/JavonDavis/parallel_appium)
-but when running this locally please remember to adjust these to match out with your machine. 
+but when running this locally please remember to adjust these to match out with the paths you might be using on your machine. These 
+files are used to specify the desired capabilities for appium. 
 
 
 ## Running the Project
@@ -97,7 +98,7 @@ platform=ios bundle exec rake wordpress:test
 
 ### Running all android tests
 
-platform=ios bundle exec rake wordpress:test
+platform=android bundle exec rake wordpress:test
 
 ### Running all tests on both platforms simultaneously
 
@@ -108,6 +109,10 @@ platform=all bundle exec rake wordpress:test
 platform=ios bundle exec rake wordpress:test[relative/path/to/spec]
 
 ## Viewing report locally
+
+## Install allure
+
+Instructions for installing Allure can be found [here](https://docs.qameta.io/allure/).
 
 Reports are generated with allure and the data for the report is stored in the output folder after the tests are finished,
 this includes any screenshots along with the test results and meta data. It's then compiled and stored in 
@@ -126,4 +131,3 @@ problems or improvements you'd like to make.
 This software is provided "as is" and without any express or implied warranties, including, without limitation, 
 the implied warranties of merchantibility and fitness for a particular purpose.
 
-Hope this gem makes someone's life easier!

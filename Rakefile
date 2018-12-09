@@ -31,6 +31,11 @@ namespace :wordpress do
     system "allure generate output/report/ --clean -o wordpress-report"
   end
 
+  desc 'Generate report'
+  task :generate_report do |_t, _args|
+    generate_report
+  end
+
   desc 'Open report'
   task :report do |_t, _args|
     puts 'Opening Report...'

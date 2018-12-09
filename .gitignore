@@ -110,3 +110,4 @@ output/
 .DS_STORE
 node_configs
 /.env
+/config/settings/
